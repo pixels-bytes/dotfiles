@@ -22,7 +22,7 @@ font:
     # Font name
     family: Hack Nerd Font Mono 
   # Font size
-  size: 12.5 
+  size: 13 
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing
@@ -71,3 +71,4 @@ import:
   # /Users/abu/.config/alacritty/dracula.yml
   - /Users/abu/.config/alacritty/nord.yml
   # /Users/abu/.config/alacritty/embark.yml
+  # /Users/abu/.config/alacritty/gruvbox.yml
