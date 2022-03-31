@@ -8,112 +8,90 @@
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
  Filename:   vanilla.lua
- Github:     pixels and bytes here
+ Github:     pixels and bytes
  Maintainer: Adam Tait
  About:      Settings for vanilla vim
 
 --]]
 
 
-local utils = require('conf/utils')
-local opt = utils.opt
-
---[[
-Nicer to write:
+local indent = 2
 
 local options = {
-  showmode = false,
-  ignorcase = true,
-  etc...
+  -- Colours
+  termguicolors = true,
+  background = 'dark',
+
+  -- Numbers
+  number = true,
+  relativenumber = true,
+
+  -- Rulers & Cursors
+  ruler = true,
+  cursorline = true,
+  colorcolumn = '80',
+  signcolumn = 'yes:2',
+  showcmd = true,
+
+  -- Tabs & Spacing
+  smartindent = true,
+  tabstop = indent,
+  softtabstop = indent,
+  shiftwidth = indent,
+  shiftround = true,
+  backspace = { 'indent', 'eol', 'start' },
+  expandtab = true,
+
+  -- Formatting
+  wrap = true,
+  textwidth = 80,
+  autoindent = true,
+  formatoptions = 'qntcl',
+  showmatch = true,
+
+  -- Search
+  ignorecase = true,
+  smartcase = true,
+  gdefault = true,
+  incsearch = true,
+  hlsearch = false,
+
+  -- Find
+  path = '+=**',
+  wildmenu = true,
+  wildignorecase = true,
+  wildignore = '+=**/node_modules/**',
+  wildmode = 'list:longest',
+  complete = 'kspell',
+  completeopt = { 'menuone', 'noselect' },
+
+  -- Window Management
+  foldenable = true,
+  foldlevelstart = 10,
+  foldnestmax =10,
+  foldmethod = 'manual',
+  scrolloff = 0,
+  splitbelow = true,
+  splitright = false,
+
+  -- System
+  swapfile = false,
+  writebackup = false,
+  backup = false,
+  undodir = '/Users/abu/.config/nvim/undodir',
+  undofile = true,
+  hidden = true,
 }
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-Will need to work out a better option for old vim:
-vim.cmd("set shortmess+=c") -- old vimscript lua-ified
-vim.opt.shortmess:append "c" -- bandaid solution
---]]
-
--- System {{{
+-- To lua-ify
 vim.cmd 'filetype plugin indent on'
 vim.g.python_host_prog = 'Users/abu/.pyenv/shims/python'
-
-opt('o', 'swapfile', false)
-opt('o', 'writebackup', false)
-opt('o', 'backup', false)
-opt('o', 'undodir', '/Users/abu/.config/nvim/undodir')
-opt('b', 'undofile', true)
-opt('o', 'hidden', true)
--- opt('b', 'omnifunc', 'syntaxcomplete#Complete')
---- }}}
-
--- UI {{{
-
--- Colours
-opt('o', 'termguicolors', true)
-opt('o', 'background', 'dark')
 vim.cmd 'colorscheme nord'
--- 'hi! Normal ctermbg=none guibg=none'
+vim.opt.shortmess:append "c"
 
--- Numbers
-opt('w', 'number', true)
-opt('w', 'relativenumber', true)
-
--- Rulers & Cursors
-opt('o', 'ruler', true)
-opt('w', 'cursorline', true)
-opt('w', 'colorcolumn', '80')
-opt('o', 'signcolumn', 'yes:2')
-opt('o', 'showcmd', true)
-
---- }}}
-
--- UX {{{
-
--- Formatting
-opt('w', 'wrap', false)
-opt('b', 'textwidth', 80)
-opt('b', 'autoindent', true)
-opt('o', 'formatoptions', 'qntcl')
-opt('o', 'showmatch', true)
-
--- Tabs & Spacing
-local indent = 2
-opt('b', 'smartindent', true)
-opt('b', 'tabstop', indent)
-opt('b', 'softtabstop', indent)
-opt('b', 'shiftwidth', indent)
-opt('o', 'shiftround', true)
-opt('o', 'backspace', 'indent,eol,start')
-opt('b', 'expandtab', true)
-
--- Window Management
-opt('w', 'foldenable', true)
-opt('o', 'foldlevelstart', 10)
-opt('w', 'foldnestmax', 10)
-opt('w', 'foldmethod', 'manual')
-opt('o', 'scrolloff', 0)
-opt('o', 'splitbelow', true)
-opt('o', 'splitright', false)
-
--- Search
-opt('o', 'ignorecase', true)
-opt('o', 'smartcase', true)
-opt('o', 'gdefault', true)
-opt('o', 'incsearch', true)
-opt('o', 'hlsearch', false)
-
--- Find
-opt('o', 'path', '+=**')
-opt('o', 'wildmenu', true)
-opt('o', 'wildignorecase', true)
-opt('o', 'wildignore', '+=**/node_modules/**')
-opt('o', 'wildmode', 'list:longest')
-opt('o', 'complete', 'kspell')
-opt('o', 'completeopt', 'menuone,noselect')
-opt('o', 'shortmess', 'c')
----}}}
 
 -- vim:foldmethod=marker:foldlevel=0
