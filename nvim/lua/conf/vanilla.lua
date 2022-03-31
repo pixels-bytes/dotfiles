@@ -18,17 +18,22 @@
 local utils = require('conf/utils')
 local opt = utils.opt
 
---[[ 
-Maybe easier to write options like this:
+--[[
+Nicer to write:
 
-local o = vim.o
-local wo = vim.wo
-local bo = vim.bo
+local options = {
+  showmode = false,
+  ignorcase = true,
+  etc...
+}
 
--- global options
-o.swapfile = true
-o.dir = '/tmp'
-o.smartcase = true
+for k, v in pairs(options) do
+  vim.opt[k] = v
+end
+
+Will need to work out a better option for old vim:
+vim.cmd("set shortmess+=c") -- old vimscript lua-ified
+vim.opt.shortmess:append "c" -- bandaid solution
 --]]
 
 -- System {{{
@@ -49,8 +54,7 @@ opt('o', 'hidden', true)
 -- Colours
 opt('o', 'termguicolors', true)
 opt('o', 'background', 'dark')
-vim.cmd 'let ayucolor="mirage"'
-vim.cmd 'colorscheme gruvbox'
+vim.cmd 'colorscheme nord'
 -- 'hi! Normal ctermbg=none guibg=none'
 
 -- Numbers
@@ -89,7 +93,7 @@ opt('b', 'expandtab', true)
 opt('w', 'foldenable', true)
 opt('o', 'foldlevelstart', 10)
 opt('w', 'foldnestmax', 10)
-opt('w', 'foldmethod', 'syntax')
+opt('w', 'foldmethod', 'manual')
 opt('o', 'scrolloff', 0)
 opt('o', 'splitbelow', true)
 opt('o', 'splitright', false)

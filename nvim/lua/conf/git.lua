@@ -16,7 +16,7 @@ local utils = require('conf/utils')
 local map = utils.map
 
 -- Fugitive
-map('n', '<leader>gs', ':G<cr>')
+map('n', '<leader>gs', ':Ge:<cr>')
 map('n', '<leader>gb', ':Git branch<space>')
 map('n', '<leader>gj', ':diffget //3<cr>')
 map('n', '<leader>gr', ':diffget //2<cr>')

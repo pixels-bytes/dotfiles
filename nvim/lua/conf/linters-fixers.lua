@@ -7,23 +7,14 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   lualine.lua
+ Filename:   linters-fixers.lua
  Github:     pixels and bytes here
  Maintainer: Adam Tait
- About:      The entry point
-
+ About:      Settings for linting and fixing 
 --]]
 
 
-local function pnb()
-  return [[Pixels & Bytes]]
-end
+local utils = require('conf/utils')
+local map = utils.map
 
-require('lualine').setup({
-  options = {
-    theme = 'nord'
-  },
-  sections = {
-    lualine_c = { pnb, 'filename' }
-  }
-})
+map('n', '<leader>p', ':Neoformat prettier<cr>')

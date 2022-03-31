@@ -17,5 +17,8 @@
 local utils = require('conf/utils')
 local map = utils.map
 
-map('n', '<leader>tt', ':FTermToggle<cr>', {silent=true})
-map('t', '<leader>tt', '<c-\\><c-n>:FTermToggle<cr>', {silent=true})
+-- map('n', '<leader>tt', ':FTermToggle<cr>', {silent=true})
+-- map('t', '<leader>tt', '<c-\\><c-n>:FTermToggle<cr>', {silent=true})
+
+map('n', '<leader>tt', '<CMD>lua require("FTerm").toggle()<CR>')
+map('t', '<leader>tt', '<c-\\><c-n><CMD>lua require("FTerm").toggle()<CR>')
