@@ -13,15 +13,6 @@
  About:      The entry point
 --]]
 
--- Reference {{{
--- https://gist.github.com/awidegreen/3854277
-
-
--- https://github.com/nanotee/nvim-lua-guide
--- https://nathansmith.io/posts/neovim-lsp/
--- https://learnxinyminutes.com/docs/lua/
--- }}}
-
 -- Plugins (conf/pluglist) {{{
 local paq = require('paq')
 paq {
