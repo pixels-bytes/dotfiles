@@ -90,5 +90,4 @@ end
 -- To lua-ify
 vim.cmd 'filetype plugin indent on'
 vim.g.python_host_prog = 'Users/abu/.pyenv/shims/python'
-vim.cmd 'colorscheme nord'
 vim.opt.shortmess:append "c"

@@ -85,5 +85,3 @@ map('v', '<tab>', '%')
 -- Open & Source init.lua
 map('n', '<leader>ev', ':vsp $MYVIMRC<cr>')
 map('n', '<leader>sv', ':luafile %<cr>')
-
--- vim:foldmethod=marker:foldlevel=0

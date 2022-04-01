@@ -5,7 +5,7 @@
  \ \   __  \ \   __  \ \  \\\  \ \  \  __\ \  \ \   __  \ \   __  \ \  \\\  \
   \ \  \ \  \ \  \|\  \ \  \\\  \ \  \|\__\_\  \ \  \ \  \ \  \|\  \ \  \\\  \
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
-	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
+  	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
  Filename:   plugins.lua
  Github:     pixels and bytes here
@@ -17,11 +17,16 @@
 -- Plugins (conf/pluglist) {{{
 local paq = require('paq')
 paq {
+  -- Plugin Manager
   'savq/paq-nvim';
+  
+  -- Common Dependencies
+  'nvim-lua/plenary.nvim';
 
   -- Themes
   'arcticicestudio/nord-vim';
   {'dracula/vim', as='dracula'};
+  'folke/tokyonight.nvim';
 
   -- Interface
   'mhinz/vim-startify';
@@ -50,7 +55,6 @@ paq {
 
   -- Telescope
   'nvim-telescope/telescope.nvim';
-  'nvim-lua/plenary.nvim';
   'nvim-telescope/telescope-project.nvim';
 
   -- Completion
