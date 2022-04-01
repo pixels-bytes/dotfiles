@@ -17,10 +17,10 @@ local map = utils.map
 
 -- Hardcore Mode {{{
 -- map('i', '<BS>', '<Nop>')
-map('', '<Up>', '<Nop>')
-map('', '<Down>', '<Nop>')
-map('', '<Left>', '<Nop>')
-map('', '<Right>', '<Nop>')
+-- map('', '<Up>', '<Nop>')
+-- map('', '<Down>', '<Nop>')
+-- map('', '<Left>', '<Nop>')
+-- map('', '<Right>', '<Nop>')
 -- map('', 'h', '<Nop>')
 -- map('', 'j', '<Nop>')
 -- map('', 'k', '<Nop>')
@@ -35,8 +35,21 @@ vim.g.mapleader = " "
 --Quick save
 map('n', '<leader>w', ':w<cr>')
 map('n', '<leader>q', ':q<cr>')
--- map('n', '<leader>\\', ':w<cr>')
--- map('i', '<leader>\\', '<esc>:w<cr>')
+
+-- Better window navigation
+map('n', '<C-h>', '<C-w>h')
+map('n', '<C-j>', '<C-w>j')
+map('n', '<C-k>', '<C-w>k')
+map('n', '<C-l>', '<C-w>l')
+
+-- Open netrw to the left
+map('n', '<leader>e', ':Lex 30<cr>')
+
+-- Resizing
+map('n', '<C-Up>', ':resize -2<cr>')
+map('n', '<C-Down>', ':resize +2<cr>')
+map('n', '<C-Left>', ':vertical resize -2<cr>')
+map('n', '<C-Right>', ':vertical resize +2<cr>')
 
 -- Args & Buffers
 map('n', '<leader>a', ':arga <c-r>=fnameescape(expand("%:p:h"))<cr>/*<c-d>')
@@ -51,20 +64,23 @@ map('n', '<leader>ds', ':e ~/Sites/vue-projects/**/*')
 map('n', '<leader>dh', ':e ~/**')
 
 -- Move blocks
--- map('n', 'J', ':m .+1<cr>==')
--- map('n', 'K', ':m .-2<cr>==')
+map('n', 'J', ':m .+1<cr>==')
+map('n', 'K', ':m .-2<cr>==')
+map('v', 'H', '<gv')
+map('v', 'L', '>gv')
 map('v', 'J', ':m \'>+1<CR>gv=gv')
 map('v', 'K', ':m \'>-2<CR>gv=gv')
+map('x', 'H', '<gv')
+map('x', 'L', '>gv')
+map('x', 'J', ':m \'>+1<CR>gv-gv')
+map('x', 'K', ':m \'<-2<CR>gv-gv')	
+
 
 -- Find & Search
 map('n', '<leader>f', ':find<space>')
 map('n', '<leader><space>', ':noh<cr>')
 map('n', '<tab>', '%')
 map('v', '<tab>', '%')
-
--- Completion
-map('i', '<tab>', 'pumvisible() ? "\\<C-n>" : "\\<tab>"', {expr = true})
-map('i', '<s-tab>', 'pumvisible() ? "\\<C-p>" : "\\<tab>"', {expr = true})
 
 -- Open & Source init.lua
 map('n', '<leader>ev', ':vsp $MYVIMRC<cr>')
