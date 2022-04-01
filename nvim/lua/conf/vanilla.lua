@@ -92,6 +92,3 @@ vim.cmd 'filetype plugin indent on'
 vim.g.python_host_prog = 'Users/abu/.pyenv/shims/python'
 vim.cmd 'colorscheme nord'
 vim.opt.shortmess:append "c"
-
-
--- vim:foldmethod=marker:foldlevel=0
