@@ -1,15 +1,18 @@
---  ________  ________  ___  ___  ___       __   ________  ________  ___  ___
--- |\   __  \|\   __  \|\  \|\  \|\  \     |\  \|\   __  \|\   __  \|\  \|\  \
--- \ \  \|\  \ \  \|\ /\ \  \\\  \ \  \    \ \  \ \  \|\  \ \  \|\ /\ \  \\\  \
---  \ \   __  \ \   __  \ \  \\\  \ \  \  __\ \  \ \   __  \ \   __  \ \  \\\  \
---   \ \  \ \  \ \  \|\  \ \  \\\  \ \  \|\__\_\  \ \  \ \  \ \  \|\  \ \  \\\  \
---    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
---     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
---
---  Filename:   mappings.lua
---  Github:     pixels and bytes here
---  Maintainer: Adam Tait
---  About:      A small set of mappings for vanilla vim
+--[[
+ ________  ________  ___  ___  ___       __   ________  ________  ___  ___
+|\   __  \|\   __  \|\  \|\  \|\  \     |\  \|\   __  \|\   __  \|\  \|\  \
+\ \  \|\  \ \  \|\ /\ \  \\\  \ \  \    \ \  \ \  \|\  \ \  \|\ /\ \  \\\  \
+ \ \   __  \ \   __  \ \  \\\  \ \  \  __\ \  \ \   __  \ \   __  \ \  \\\  \
+  \ \  \ \  \ \  \|\  \ \  \\\  \ \  \|\__\_\  \ \  \ \  \ \  \|\  \ \  \\\  \
+   \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
+    \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
+
+
+ Filename:   mappings.lua
+ Github:     pixels and bytes here
+ Maintainer: Adam Tait
+ About:      A small set of mappings for vanilla vim
+--]]
 
 
 local utils = require('conf/utils')
@@ -54,9 +57,10 @@ map('n', '<C-Right>', ':vertical resize +2<cr>')
 -- Args & Buffers
 map('n', '<leader>a', ':arga <c-r>=fnameescape(expand("%:p:h"))<cr>/*<c-d>')
 map('n', '<leader>b', ':b <c-d>')
-map('n', '<leader>[', ':bp<cr>')
-map('n', '<leader>]', ':bn<cr>')
-map('n', '<leader>bd', ':%bd|e#<cr>')
+map('n', '<leader>bp', ':bp<cr>')
+map('n', '<leader>bn', ':bn<cr>')
+map('n', '<leader>bd', ':bd<cr>')
+map('n', '<leader>bD', ':%bd|e#<cr>')
 
 -- Bookmarks
 map('n', '<leader>dv', ':e ~/.config/nvim/**/*')

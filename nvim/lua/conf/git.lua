@@ -5,11 +5,11 @@
 --   \ \  \ \  \ \  \|\  \ \  \\\  \ \  \|\__\_\  \ \  \ \  \ \  \|\  \ \  \\\  \
 --    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
 --     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
--- 
+--
 --  Filename:   git.lua
 --  Github:     pixels and bytes here
 --  Maintainer: Adam Tait
---  About:      All the settings for git control 
+--  About:      All the settings for git control
 
 
 local utils = require('conf/utils')
@@ -20,9 +20,6 @@ map('n', '<leader>gs', ':Ge:<cr>')
 map('n', '<leader>gb', ':Git branch<space>')
 map('n', '<leader>gj', ':diffget //3<cr>')
 map('n', '<leader>gr', ':diffget //2<cr>')
-
--- GV
-map('n', '<leader>gv', ':GV<cr>')
 
 --[[
 " fugitive git bindings
@@ -39,7 +36,4 @@ nnoremap <space>gm :Gmove<Space>
 nnoremap <space>go :Git checkout<Space>
 nnoremap <space>gps :Dispatch! git push<CR>
 nnoremap <space>gpl :Dispatch! git pull<CR>
-
--- map junegunn/gv
--- map git-rhubarb
 --]]
