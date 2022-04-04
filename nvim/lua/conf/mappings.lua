@@ -47,7 +47,6 @@ map('n', '<C-l>', '<C-w>l')
 
 -- Terminal
 map('n', '<C-\\>', ':vsplit<cr> :terminal<cr> i')
-map('t', '<Esc>', '<C-\\><C-n>')
 
 -- Open netrw to the left
 map('n', '<leader>e', ':Lex 30<cr>')
