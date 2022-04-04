@@ -20,6 +20,9 @@ paq {
   -- Plugin Manager
   'savq/paq-nvim';
 
+  -- File System
+  'airblade/vim-rooter';
+
   -- Common Dependencies
   'nvim-lua/plenary.nvim';
 
@@ -39,33 +42,34 @@ paq {
   'tpope/vim-surround';
   'unblevable/quick-scope';
 
-  -- File System
-  'airblade/vim-rooter';
+  -- Terminal
+  'numtostr/FTerm.nvim';
 
   --Git
   'tpope/vim-fugitive';
   'lewis6991/gitsigns.nvim';
 
-  -- Terminal
-  'numtostr/FTerm.nvim';
-
-  -- Treesitter & LSP
-  {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'};
-  'neovim/nvim-lspconfig';
-
-  -- Telescope
-  'nvim-telescope/telescope.nvim';
-  'nvim-telescope/telescope-project.nvim';
-
   -- Completion
   'hrsh7th/nvim-cmp';
-  'onsails/lspkind-nvim';
   'hrsh7th/cmp-buffer';
   'hrsh7th/cmp-path';
   'hrsh7th/cmp-cmdline';
   'hrsh7th/cmp-nvim-lsp';
+  'hrsh7th/cmp-nvim-lua';
+  'onsails/lspkind-nvim';
   'saadparwaiz1/cmp_luasnip';
   {'tzachar/cmp-tabnine', run='./install.sh' };
+
+  -- LSP
+  'neovim/nvim-lspconfig';
+  'williamboman/nvim-lsp-installer';
+
+  -- Treesitter
+ {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'};
+
+  -- Telescope
+  'nvim-telescope/telescope.nvim';
+  'nvim-telescope/telescope-project.nvim';
 
   -- snippets
   'L3MON4D3/LuaSnip'; --snippet engine
@@ -78,10 +82,10 @@ paq {
 
 -- }}}
 
--- Other/ Movements/ Interface {{{
--- paq {'kosayoda/nvim-lightbulb'}
--- paq {'jiangmiao/auto-pairs'} -- cohama/lexima.vim (cf nvim-compe)
--- paq {'mbbill/undotree'}
--- }
-
+--[[ Other/ Movements/ Interface {{{
+'windwp/nvim-autopairs'
+'nvim-pack/nvim-spectre
+'kosayoda/nvim-lightbulb'
+'mbbill/undotree'
+--]]
 -- vim:foldmethod=marker:foldlevel=1

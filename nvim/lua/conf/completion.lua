@@ -21,16 +21,19 @@ end
 
 local cmp_status_ok, cmp = pcall(require, 'cmp')
 if not cmp_status_ok then
+  vim.notify('Problem with nvim-cmp!')
   return
 end
 
 local snip_status_ok, luasnip = pcall(require, 'luasnip')
 if not snip_status_ok then
+  vim.notify('Problem with luasnip')
   return
 end
 
 local lspkind_status_ok, lspkind = pcall(require, 'lspkind')
 if not lspkind_status_ok then
+  vim.notify('Problem with lspkind')
   return
 end
 
@@ -85,6 +88,7 @@ cmp.setup({
       maxwidth = 50,
       menu = ({
         nvim_lsp = "[LSP]",
+        nvim_lua = "[Lua]",
         luasnip = "[Snippet]",
         cmp_tabnine = "[Tabnine]",
         buffer = "[Buffer]",
@@ -99,7 +103,8 @@ cmp.setup({
 
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'luasnip' }, -- For luasnip users.
+    { name = 'nvim_lua' },
+    { name = 'luasnip' },
     { name = 'cmp-tabnine' },
     { name = 'buffer' },
     { name = 'path' },
