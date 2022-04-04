@@ -86,6 +86,7 @@ cmp.setup({
       menu = ({
         nvim_lsp = "[LSP]",
         luasnip = "[Snippet]",
+        cmp_tabnine = "[Tabnine]",
         buffer = "[Buffer]",
         path = "[Path]",
       }),
@@ -99,7 +100,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For luasnip users.
-    { name = '/cmp-tabnine' },
+    { name = 'cmp-tabnine' },
     { name = 'buffer' },
     { name = 'path' },
   }),
