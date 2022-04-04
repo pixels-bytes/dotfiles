@@ -19,8 +19,20 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-local luasnip = require('luasnip')
-local cmp = require('cmp')
+local cmp_status_ok, cmp = pcall(require, 'cmp')
+if not cmp_status_ok then
+  return
+end
+
+local snip_status_ok, luasnip = pcall(require, 'luasnip')
+if not snip_status_ok then
+  return
+end
+
+local lspkind_status_ok, lspkind = pcall(require, 'lspkind')
+if not lspkind_status_ok then
+  return
+end
 
 -- Use VSCode style snippets from friendly-snippets
 require('luasnip.loaders.from_vscode').lazy_load()
@@ -42,8 +54,6 @@ cmp.setup({
       c = cmp.mapping.close(),
     }),
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-
-
 
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -68,13 +78,35 @@ cmp.setup({
     end, { "i", "s" }),
   },
 
+  formatting = {
+    fields = { "kind", "abbr", "menu" },
+    format = lspkind.cmp_format({
+      mode = "symbol",
+      maxwidth = 50,
+      menu = ({
+        nvim_lsp = "[LSP]",
+        luasnip = "[Snippet]",
+        buffer = "[Buffer]",
+        path = "[Path]",
+      }),
+    }),
+  },
+
+  documentation = {
+    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  },
+
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For luasnip users.
-    { name = 'tzachar/cmp-tabnine' },
+    { name = '/cmp-tabnine' },
     { name = 'buffer' },
     { name = 'path' },
-  })
+  }),
+
+  experimental = {
+    ghost_text = true,
+  }
 })
 
 cmp.setup.cmdline(':', {
