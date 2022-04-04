@@ -31,6 +31,7 @@ paq {
   'arcticicestudio/nord-vim';
   {'dracula/vim', as='dracula'};
   'gruvbox-community/gruvbox';
+  {'catppuccin/nvim', as='catppuccin'};
 
   -- Interface
   'mhinz/vim-startify';
@@ -84,6 +85,8 @@ paq {
 
 --[[ Other/ Movements/ Interface {{{
 'windwp/nvim-autopairs'
+'folke/todo-comments.nvim'
+'folke/trouble.nvim'
 'nvim-pack/nvim-spectre
 'kosayoda/nvim-lightbulb'
 'mbbill/undotree'

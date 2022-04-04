@@ -68,7 +68,8 @@ key_bindings:
 # Colors
 import:
   # /Users/abu/.config/alacritty/dracula.yml
-  - /Users/abu/.config/alacritty/tokyonight.yml
+  - /Users/abu/.config/alacritty/catppuccin.yml
+  # /Users/abu/.config/alacritty/tokyonight.yml
   # /Users/abu/.config/alacritty/nord.yml
   # /Users/abu/.config/alacritty/embark.yml
   # /Users/abu/.config/alacritty/gruvbox.yml
