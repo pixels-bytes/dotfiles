@@ -8,10 +8,12 @@
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
 
- Filename:   lsp.lua
+ Filename:   old.lua
  Github:     pixels and bytes here
  Maintainer: Adam Tait
  Function:   Configure LSP client according to nvim-lspconfig CONFIG.MD
+
+ First draft compliled LSP config
 --]]
 
 -- Languages {{{
