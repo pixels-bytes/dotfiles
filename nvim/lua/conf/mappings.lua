@@ -45,6 +45,10 @@ map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
+-- Terminal
+map('n', '<C-\\>', ':vsplit<cr> :terminal<cr> i')
+map('t', '<Esc>', '<C-\\><C-n>')
+
 -- Open netrw to the left
 map('n', '<leader>e', ':Lex 30<cr>')
 
@@ -77,8 +81,7 @@ map('v', 'K', ':m \'>-2<CR>gv=gv')
 map('x', 'H', '<gv')
 map('x', 'L', '>gv')
 map('x', 'J', ':m \'>+1<CR>gv-gv')
-map('x', 'K', ':m \'<-2<CR>gv-gv')	
-
+map('x', 'K', ':m \'<-2<CR>gv-gv')
 
 -- Find & Search
 map('n', '<leader>f', ':find<space>')
