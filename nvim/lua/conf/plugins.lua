@@ -20,11 +20,11 @@ paq {
   -- Plugin Manager
   'savq/paq-nvim';
 
-  -- File System
-  'airblade/vim-rooter';
-
   -- Common Dependencies
   'nvim-lua/plenary.nvim';
+
+  -- File System
+  'airblade/vim-rooter';
 
   -- Themes
   'folke/tokyonight.nvim';
@@ -39,6 +39,9 @@ paq {
   'kyazdani42/nvim-web-devicons';
   'psliwka/vim-smoothie';
 
+  -- Treesitter
+  {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'};
+
   -- Movements
   'tpope/vim-surround';
   'unblevable/quick-scope';
@@ -47,7 +50,6 @@ paq {
   'numtostr/FTerm.nvim';
 
   --Git
-  'tpope/vim-fugitive';
   'lewis6991/gitsigns.nvim';
 
   -- Completion
@@ -61,20 +63,17 @@ paq {
   'saadparwaiz1/cmp_luasnip';
   {'tzachar/cmp-tabnine', run='./install.sh' };
 
+  -- Snippets
+  'L3MON4D3/LuaSnip';
+  'rafamadriz/friendly-snippets';
+
   -- LSP
   'neovim/nvim-lspconfig';
   'williamboman/nvim-lsp-installer';
 
-  -- Treesitter
- {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'};
-
   -- Telescope
   'nvim-telescope/telescope.nvim';
   'nvim-telescope/telescope-project.nvim';
-
-  -- snippets
-  'L3MON4D3/LuaSnip'; --snippet engine
-  'rafamadriz/friendly-snippets'; -- a bunch of snippets to use
 }
 
 
@@ -87,6 +86,8 @@ paq {
 'windwp/nvim-autopairs'
 'folke/todo-comments.nvim'
 'folke/trouble.nvim'
+'folke/twilight.nvim'
+'folke/which-key.nvim'
 'nvim-pack/nvim-spectre
 'kosayoda/nvim-lightbulb'
 'mbbill/undotree'
