@@ -52,10 +52,10 @@ map('n', '<C-\\>', ':vsplit<cr> :terminal<cr> i')
 map('n', '<leader>e', ':Lex 30<cr>')
 
 -- Resizing
-map('n', '<C-Up>', ':resize -2<cr>')
-map('n', '<C-Down>', ':resize +2<cr>')
-map('n', '<C-Left>', ':vertical resize -2<cr>')
-map('n', '<C-Right>', ':vertical resize +2<cr>')
+map('n', '<S-Up>', ':resize -2<cr>')
+map('n', '<S-Down>', ':resize +2<cr>')
+map('n', '<S-Left>', ':vertical resize -2<cr>')
+map('n', '<S-Right>', ':vertical resize +2<cr>')
 
 -- Args & Buffers
 map('n', '<leader>a', ':arga <c-r>=fnameescape(expand("%:p:h"))<cr>/*<c-d>')
@@ -64,6 +64,8 @@ map('n', '<leader>bp', ':bp<cr>')
 map('n', '<leader>bn', ':bn<cr>')
 map('n', '<leader>bd', ':bd<cr>')
 map('n', '<leader>bD', ':%bd|e#<cr>')
+map('n', '<leader>[', ':bp<cr>')
+map('n', '<leader>]', ':bn<cr>')
 
 -- Bookmarks
 map('n', '<leader>dv', ':e ~/.config/nvim/**/*')
