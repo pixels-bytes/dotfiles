@@ -79,6 +79,9 @@ paq {
 -- }}}
 
 --[[ Other/ Movements/ Interface {{{
+'numToStr/Comment.nvim'
+'glepnir/lspsaga.nvim'
+'shaunsingh/nord.nvim'
 'jose-elias-alvarez/null-ls.nvim'
 'windwp/nvim-autopairs'
 'folke/todo-comments.nvim'
