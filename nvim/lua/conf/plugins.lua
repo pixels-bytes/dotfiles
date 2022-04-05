@@ -38,6 +38,7 @@ paq {
   'nvim-lualine/lualine.nvim';
   'kyazdani42/nvim-web-devicons';
   'psliwka/vim-smoothie';
+  'kyazdani42/nvim-tree.lua';
 
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'};
@@ -75,20 +76,16 @@ paq {
   'nvim-telescope/telescope.nvim';
   'nvim-telescope/telescope-project.nvim';
 }
-
-
--- Linting & Fixing
--- paq {'sbdchd/neoformat'}
-
 -- }}}
 
 --[[ Other/ Movements/ Interface {{{
+'jose-elias-alvarez/null-ls.nvim'
 'windwp/nvim-autopairs'
 'folke/todo-comments.nvim'
 'folke/trouble.nvim'
 'folke/twilight.nvim'
 'folke/which-key.nvim'
-'nvim-pack/nvim-spectre
+'nvim-pack/nvim-spectre'
 'kosayoda/nvim-lightbulb'
 'mbbill/undotree'
 --]]
