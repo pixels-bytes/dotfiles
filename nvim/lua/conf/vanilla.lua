@@ -18,6 +18,9 @@
 local indent = 2
 
 local options = {
+  --Statusbar
+  laststatus = 3,
+
   -- Colours
   termguicolors = true,
   background = 'dark',
