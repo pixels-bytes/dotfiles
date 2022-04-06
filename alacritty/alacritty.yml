@@ -1,7 +1,8 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Setup term for programs to be able to use it
-#env:
+env:
+  TERM: xterm-256color
 
 window:
   # Spread additional padding evenly around the terminal content.
@@ -68,8 +69,8 @@ key_bindings:
 # Colors
 import:
   # /Users/abu/.config/alacritty/dracula.yml
-  # /Users/abu/.config/alacritty/catppuccin.yml
+  - /Users/abu/.config/alacritty/catppuccin.yml
   # /Users/abu/.config/alacritty/tokyonight.yml
   # /Users/abu/.config/alacritty/nord.yml
   # /Users/abu/.config/alacritty/embark.yml
-  - /Users/abu/.config/alacritty/gruvbox-yml
+  # /Users/abu/.config/alacritty/gruvbox-yml
