@@ -21,9 +21,10 @@ font:
   normal:
     # Font name
     family: Hack Nerd Font Mono
-  # Font size
-  size: 13
 
+  # Font size
+  size: 14
+  line_height: 100%
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing
   # I've given in 14 spacing which fits really well with my fonts, you may change it
