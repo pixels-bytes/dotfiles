@@ -1,7 +1,9 @@
 theme = "gruvbox"
 
 [editor]
+true-color = true
 line-number = "relative"
+rulers = [80]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -10,3 +12,9 @@ select = "underline"
 
 [editor.lsp]
 display-messages = true
+
+[keys.normal]
+"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+
+[keys.insert]
+k = { j = "normal_mode" }
