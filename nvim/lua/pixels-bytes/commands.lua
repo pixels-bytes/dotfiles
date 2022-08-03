@@ -19,3 +19,11 @@ local cmd = vim.cmd
 
 -- highlight on yank
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
+
+-- auto run :PackerCompile when plugins.lua is changed
+cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])

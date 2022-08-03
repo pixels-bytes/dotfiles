@@ -15,67 +15,70 @@
 
 
 -- Plugins (conf/pluglist) {{{
-local paq = require('paq')
-paq {
-  -- Plugin Manager
-  'savq/paq-nvim';
-
-  -- Common Dependencies
-  'nvim-lua/plenary.nvim';
+return require('packer').startup(function(use)
+  -- Packer can manage itself
+  use 'wbthomason/packer.nvim'
+  
+  -- Themes
+  use 'folke/tokyonight.nvim'
+  use {'dracula/vim', as='dracula'}
+  use 'gruvbox-community/gruvbox'
+  use {'catppuccin/nvim', as='catppuccin'}
 
   -- File System
-  'airblade/vim-rooter';
-
-  -- Themes
-  'arcticicestudio/nord-vim';
-  'folke/tokyonight.nvim';
-  {'dracula/vim', as='dracula'};
-  'gruvbox-community/gruvbox';
-  {'catppuccin/nvim', as='catppuccin'};
+  use 'airblade/vim-rooter'
 
   -- Interface
-  'mhinz/vim-startify';
-  'nvim-lualine/lualine.nvim';
-  'kyazdani42/nvim-web-devicons';
-  'psliwka/vim-smoothie';
+  use 'mhinz/vim-startify'
+  use 'psliwka/vim-smoothie'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   -- Treesitter
-  {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'};
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
   -- Movements
-  'tpope/vim-surround';
-  'unblevable/quick-scope';
+  use 'tpope/vim-surround'
+  use 'unblevable/quick-scope'
 
   -- Terminal
-  'numtostr/FTerm.nvim';
+  use 'numtostr/FTerm.nvim'
 
   --Git
-  'lewis6991/gitsigns.nvim';
+  use 'lewis6991/gitsigns.nvim'
 
   -- Completion
-  'hrsh7th/nvim-cmp';
-  'hrsh7th/cmp-buffer';
-  'hrsh7th/cmp-path';
-  'hrsh7th/cmp-cmdline';
-  'hrsh7th/cmp-nvim-lsp';
-  'hrsh7th/cmp-nvim-lua';
-  'onsails/lspkind-nvim';
-  'saadparwaiz1/cmp_luasnip';
---- -  {'tzachar/cmp-tabnine', run='./install.sh' };
-
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'onsails/lspkind-nvim'
+  use 'saadparwaiz1/cmp_luasnip'
+  -- {'tzachar/cmp-tabnine', run='./install.sh' };
+  
   -- Snippets
-  'L3MON4D3/LuaSnip';
-  'rafamadriz/friendly-snippets';
+  use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
 
   -- LSP
-  'neovim/nvim-lspconfig';
-  'williamboman/nvim-lsp-installer';
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
 
   -- Telescope
-  'nvim-telescope/telescope.nvim';
-  'nvim-telescope/telescope-project.nvim';
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+  use 'nvim-telescope/telescope-project.nvim'
   -- 'nvim-telescope/telescope-file-browser.nvim'
-}
+end)
 -- }}}
 
 --[[ Other/ Movements/ Interface {{{
