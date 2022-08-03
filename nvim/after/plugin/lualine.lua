@@ -7,21 +7,23 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   tree.lua
+ Filename:   lualine.lua
  Github:     pixels and bytes here
  Maintainer: Adam Tait
- About:      Filetree settings
+ About:      The entry point
+
 --]]
 
 
-local utils = require('conf/utils')
-local map = utils.map
+local function pnb()
+  return [[Pixels & Bytes]]
+end
 
-map('n', '<leader>e', ':NvimTreeToggle<cr>')
-map('n', '<leader>er', ':NvimTreeRefresh<cr>')
-
-require('nvim-tree').setup {
-  view = {
-    width = 40,
+require('lualine').setup({
+  options = {
+    theme = 'tokyonight'
+  },
+  sections = {
+    lualine_c = { pnb, 'filename' }
   }
-}
+})

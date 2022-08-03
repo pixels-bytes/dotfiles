@@ -15,7 +15,7 @@
 --]]
 
 
-local utils = require('conf/utils')
+local utils = require('pixels-bytes/utils')
 local map = utils.map
 
 -- Hardcore Mode {{{
@@ -32,7 +32,6 @@ local map = utils.map
 
 -- Esc & Map Leader
 map('n', '<SPACE>', '<Nop>')
-map('i', 'kj', '<esc>')
 vim.g.mapleader = " "
 
 --Quick save
@@ -89,6 +88,9 @@ map('n', '<leader>f', ':find<space>')
 map('n', '<leader><space>', ':noh<cr>')
 map('n', '<tab>', '%')
 map('v', '<tab>', '%')
+
+-- Open current file in default program
+map('n', '<leader>x', ':!open %<cr><cr>')
 
 -- Open & Source init.lua
 map('n', '<leader>ev', ':vsp $MYVIMRC<cr>')

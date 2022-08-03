@@ -22,7 +22,28 @@ if not status_ok then
 end
 
 ts.setup {
-  ensure_installed = 'maintained',
+  ensure_installed = {
+    "bash",
+    "c",
+    "comment",
+    "css",
+    "fish",
+    "html",
+    "http",
+    "javascript",
+    "json",
+    "lua",
+    "pug",
+    "python",
+    "regex",
+    "ruby",
+    "scss",
+    "sql",
+    "svelte",
+    "typescript",
+    "vue",
+    "yaml",
+  },
   sync_install = false,
   ignore_install = {},
   highlight = {

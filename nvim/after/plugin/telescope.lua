@@ -60,7 +60,7 @@ require('telescope').setup{
 -- }}}
 
 -- Mappings {{{
-local utils = require('conf/utils')
+local utils = require('pixels-bytes/utils')
 local map = utils.map
 
 map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>')
@@ -69,7 +69,7 @@ map('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>')
 map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>')
 -- }}}
 
--- Projexts Extension {{{
+-- Projects Extension {{{
 require'telescope'.load_extension('project')
 map(
   'n',

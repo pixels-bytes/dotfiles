@@ -7,23 +7,16 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   lualine.lua
+ Filename:   terminal.lua
  Github:     pixels and bytes here
  Maintainer: Adam Tait
- About:      The entry point
-
+ About:      Settings for a persistant termainal
 --]]
 
 
-local function pnb()
-  return [[Pixels & Bytes]]
-end
+local utils = require('pixels-bytes/utils')
+local map = utils.map
 
-require('lualine').setup({
-  options = {
-    theme = 'gruvbox'
-  },
-  sections = {
-    lualine_c = { pnb, 'filename' }
-  }
-})
+
+map('n', '<leader>tt', '<CMD>lua require("FTerm").toggle()<CR>')
+map('t', '<leader>tt', '<c-\\><c-n><CMD>lua require("FTerm").toggle()<CR>')

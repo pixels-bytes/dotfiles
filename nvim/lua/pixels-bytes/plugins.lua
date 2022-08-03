@@ -27,8 +27,8 @@ paq {
   'airblade/vim-rooter';
 
   -- Themes
-  'folke/tokyonight.nvim';
   'arcticicestudio/nord-vim';
+  'folke/tokyonight.nvim';
   {'dracula/vim', as='dracula'};
   'gruvbox-community/gruvbox';
   {'catppuccin/nvim', as='catppuccin'};
@@ -38,7 +38,6 @@ paq {
   'nvim-lualine/lualine.nvim';
   'kyazdani42/nvim-web-devicons';
   'psliwka/vim-smoothie';
-  'kyazdani42/nvim-tree.lua';
 
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'};
@@ -62,7 +61,7 @@ paq {
   'hrsh7th/cmp-nvim-lua';
   'onsails/lspkind-nvim';
   'saadparwaiz1/cmp_luasnip';
-  {'tzachar/cmp-tabnine', run='./install.sh' };
+--- -  {'tzachar/cmp-tabnine', run='./install.sh' };
 
   -- Snippets
   'L3MON4D3/LuaSnip';
@@ -75,10 +74,12 @@ paq {
   -- Telescope
   'nvim-telescope/telescope.nvim';
   'nvim-telescope/telescope-project.nvim';
+  -- 'nvim-telescope/telescope-file-browser.nvim'
 }
 -- }}}
 
 --[[ Other/ Movements/ Interface {{{
+'pianocomposer321/yabs.nvim'
 'numToStr/Comment.nvim'
 'glepnir/lspsaga.nvim'
 'shaunsingh/nord.nvim'

@@ -17,7 +17,7 @@
 --]]
 
 -- Languages {{{
-local utils = require('conf/utils')
+local utils = require('pixels-bytes/utils')
 local map = utils.map
 
 local custom_attach = function(client)

@@ -7,16 +7,14 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   terminal.lua
+
+ Filename:   pixels-bytes/init.lua
  Github:     pixels and bytes here
  Maintainer: Adam Tait
- About:      Settings for a persistant termainal
+ Function:   Initialise nvim 
 --]]
 
 
-local utils = require('conf/utils')
-local map = utils.map
-
-
-map('n', '<leader>tt', '<CMD>lua require("FTerm").toggle()<CR>')
-map('t', '<leader>tt', '<c-\\><c-n><CMD>lua require("FTerm").toggle()<CR>')
+require('pixels-bytes/vanilla')
+require('pixels-bytes/mappings')
+require('pixels-bytes/commands')

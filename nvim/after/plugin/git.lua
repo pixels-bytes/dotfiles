@@ -12,7 +12,7 @@
 --  About:      All the settings for git control
 
 
-local utils = require('conf/utils')
+local utils = require('pixels-bytes/utils')
 local map = utils.map
 
 -- Fugitive

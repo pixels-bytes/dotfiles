@@ -15,7 +15,7 @@
 --]]
 
 
-local utils = require('conf/utils')
+local utils = require('pixels-bytes/utils')
 local map = utils.map
 
 local status_ok, lsp_installer = pcall(require, 'nvim-lsp-installer')
@@ -55,7 +55,7 @@ end
 
 local enhance_server_opts = {
   ["sumneko_lua"] = function(opts)
-    opts.settings = require('conf/lsp/lua_settings')
+    opts.settings = require('pixels-bytes/lsp/lua_settings')
   end,
 }
 

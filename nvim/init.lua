@@ -14,18 +14,4 @@
 --]]
 
 
--- Imports
-require('conf/utils')
-require('conf/vanilla')
-require('conf/mappings')
-require('conf/commands')
-require('conf/plugins')
-require('conf/colorscheme')
-require('conf/lualine')
-require('conf/terminal')
-require('conf/tree')
-require('conf/git')
-require('conf/completion')
-require('conf/lsp')
-require('conf/treesitter')
-require('conf/telescope')
+require("pixels-bytes")
