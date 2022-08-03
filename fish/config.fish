@@ -1,7 +1,6 @@
 starship init fish | source
 
 thefuck --alias | source
-set -g fish_user_paths "/usr/local/opt/apr/bin" $fish_user_paths
 set -g direnv_fish_mode disable_arrow
 direnv hook fish | source
 
