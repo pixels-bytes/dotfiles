@@ -129,10 +129,10 @@ _G.packer_plugins = {
     path = "/Users/abu/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  gruvbox = {
+  ["gruvbox-baby"] = {
     loaded = true,
-    path = "/Users/abu/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/gruvbox-community/gruvbox"
+    path = "/Users/abu/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
+    url = "https://github.com/luisiacc/gruvbox-baby"
   },
   ["lspkind-nvim"] = {
     loaded = true,

@@ -46,7 +46,7 @@ local options = {
   expandtab = true,
 
   -- Formatting
-  wrap = true,
+  wrap = false,
   textwidth = 80,
   autoindent = true,
   formatoptions = 'qntcl',

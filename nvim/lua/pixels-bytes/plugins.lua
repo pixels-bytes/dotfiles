@@ -22,8 +22,8 @@ return require('packer').startup(function(use)
   -- Themes
   use 'folke/tokyonight.nvim'
   use {'dracula/vim', as='dracula'}
-  use 'gruvbox-community/gruvbox'
   use {'catppuccin/nvim', as='catppuccin'}
+  use 'luisiacc/gruvbox-baby'
 
   -- File System
   use 'airblade/vim-rooter'
