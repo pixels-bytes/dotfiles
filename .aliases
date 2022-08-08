@@ -11,7 +11,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias dc="cd ~/Documents"
 alias p="cd ~/Documents/projects"
-alias home="cd ~"
 
 # VIM
 alias vim="nvim"
