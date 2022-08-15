@@ -19,14 +19,15 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   
+  -- File System
+  use 'airblade/vim-rooter'
+  
   -- Themes
   use 'folke/tokyonight.nvim'
   use {'dracula/vim', as='dracula'}
   use {'catppuccin/nvim', as='catppuccin'}
   use 'luisiacc/gruvbox-baby'
-
-  -- File System
-  use 'airblade/vim-rooter'
+  use "rebelot/kanagawa.nvim"
 
   -- Interface
   use 'mhinz/vim-startify'
@@ -36,40 +37,42 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  -- Treesitter
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
-
   -- Movements
   use 'tpope/vim-surround'
   use 'unblevable/quick-scope'
+
+  -- Snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
+
+  -- Completion
+  use {
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lua',
+    'onsails/lspkind-nvim',
+    'saadparwaiz1/cmp_luasnip',
+    {'tzachar/cmp-tabnine', run='./install.sh'}
+  }
+
+  -- LSP
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+
+  -- Treesitter
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
   -- Terminal
   use 'numtostr/FTerm.nvim'
 
   --Git
   use 'lewis6991/gitsigns.nvim'
-
-  -- Completion
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-nvim-lua'
-  use 'onsails/lspkind-nvim'
-  use 'saadparwaiz1/cmp_luasnip'
-  -- {'tzachar/cmp-tabnine', run='./install.sh' };
-  
-  -- Snippets
-  use 'L3MON4D3/LuaSnip'
-  use 'rafamadriz/friendly-snippets'
-
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
 
   -- Telescope
   use {
@@ -82,6 +85,7 @@ end)
 -- }}}
 
 --[[ Other/ Movements/ Interface {{{
+'p00f/clangd_extensions.nvim'
 'pianocomposer321/yabs.nvim'
 'numToStr/Comment.nvim'
 'glepnir/lspsaga.nvim'

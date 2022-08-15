@@ -7,18 +7,37 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
-
- Filename:   lsp/sumneko_lua.lua
- Github:     pixels and bytes
+ Filename:   mason.lua
+ Github:     pixels and bytes here
  Maintainer: Adam Tait
- Function:   LSP Settings for Lua language
+ About:      Configure mason & mason-lspconfig
 --]]
 
 
-return {
-  Lua = {
-    diagnostics = {
-      globals = { "vim" }
+require("mason").setup({
+  ui = {
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗"
     }
   }
-}
+})
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "clangd",
+    "cssls",
+    "eslint",
+    "html",
+    "jsonls",
+    "pyright",
+    "sqlls",
+    "sumneko_lua",
+    "svelte",
+    "tailwindcss",
+    "tsserver",
+    "vuels",
+  }
+})
+
+require("lsp/shared").greet()
