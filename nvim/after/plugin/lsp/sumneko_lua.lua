@@ -16,11 +16,9 @@
 
 
 return {
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" }
-      }
+  Lua = {
+    diagnostics = {
+      globals = { "vim" }
     }
   }
 }
