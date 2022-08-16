@@ -20,7 +20,7 @@ font:
   # UI for powerline & tmux bottom bar.
   normal:
     # Font name
-    family: Hack Nerd Font Mono
+    family: JetBrains Mono
 
   # Font size
   size: 14
