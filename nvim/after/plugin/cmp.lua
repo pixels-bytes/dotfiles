@@ -15,7 +15,7 @@
 
 
 local has_words_before = function()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
@@ -107,8 +107,8 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'nvim_lua' },
     { name = 'luasnip' },
-    { name = 'cmp-tabnine' },
     { name = 'buffer' },
+    { name = 'cmp_tabnine' },
     { name = 'path' },
   }),
 
@@ -120,6 +120,11 @@ cmp.setup({
 cmp.setup.cmdline(':', {
   sources = {
     { name = 'cmdline' },
-    { name = 'buffer' }
+  }
+})
+
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' },
   }
 })
