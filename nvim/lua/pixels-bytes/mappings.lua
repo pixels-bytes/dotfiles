@@ -31,8 +31,8 @@ local map = utils.map
 -- }}}
 
 -- Esc & Map Leader
-map('n', '<SPACE>', '<Nop>')
-vim.g.mapleader = " "
+-- map('n', '<SPACE>', '<Nop>')
+vim.g.mapleader = ","
 
 --Quick save
 map('n', '<leader>w', ':w<cr>')
@@ -91,6 +91,11 @@ map('v', '<tab>', '%')
 
 -- Open current file in default program
 map('n', '<leader>x', ':!open %<cr><cr>')
+
+-- Diagnostics
+map('n', '<space>e', 'vim.diagnostic.open_float')
+map('n', '[d', 'vim.diagnostic.goto_prev')
+map('n', ']d', 'vim.diagnostic.goto_next')
 
 -- Open & Source init.lua
 map('n', '<leader>ev', ':vsp $MYVIMRC<cr>')
