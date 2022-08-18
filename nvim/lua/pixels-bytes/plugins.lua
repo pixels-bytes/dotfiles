@@ -18,16 +18,17 @@
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  
+
   -- File System
   use 'airblade/vim-rooter'
-  
+
   -- Themes
   use 'folke/tokyonight.nvim'
   use {'dracula/vim', as='dracula'}
   use {'catppuccin/nvim', as='catppuccin'}
   use 'luisiacc/gruvbox-baby'
-  use "rebelot/kanagawa.nvim"
+  use 'rebelot/kanagawa.nvim'
+  use 'shaunsingh/nord.nvim'
 
   -- Interface
   use 'mhinz/vim-startify'
@@ -55,14 +56,18 @@ return require('packer').startup(function(use)
     'hrsh7th/cmp-nvim-lua',
     'onsails/lspkind-nvim',
     'saadparwaiz1/cmp_luasnip',
-    {'tzachar/cmp-tabnine', run='./install.sh'}
+    {
+      'tzachar/cmp-tabnine',
+      run='./install.sh',
+      requires = 'hrsh7th/nvim-cmp'
+    }
   }
 
   -- LSP
   use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
   }
 
   -- Treesitter
@@ -85,17 +90,16 @@ end)
 -- }}}
 
 --[[ Other/ Movements/ Interface {{{
+'jose-elias-alvarez/null-ls.nvim'
+'folke/which-key.nvim'
+'folke/trouble.nvim'
+'folke/todo-comments.nvim'
+'folke/twilight.nvim'
 'p00f/clangd_extensions.nvim'
 'pianocomposer321/yabs.nvim'
 'numToStr/Comment.nvim'
 'glepnir/lspsaga.nvim'
-'shaunsingh/nord.nvim'
-'jose-elias-alvarez/null-ls.nvim'
 'windwp/nvim-autopairs'
-'folke/todo-comments.nvim'
-'folke/trouble.nvim'
-'folke/twilight.nvim'
-'folke/which-key.nvim'
 'nvim-pack/nvim-spectre'
 'kosayoda/nvim-lightbulb'
 'mbbill/undotree'
