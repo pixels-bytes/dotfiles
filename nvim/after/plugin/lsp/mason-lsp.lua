@@ -15,6 +15,7 @@
 --]]
 
 
+-- {{{ Pcalls
 local mason_status_ok, masonlsp = pcall(require, "mason-lspconfig")
 if not mason_status_ok then
   vim.notify('Problem with mason-lspconfig')
@@ -25,6 +26,7 @@ if not lsp_status_ok then
   vim.notify('Problem with lspconfig')
   return
 end
+-- }}}
 
 masonlsp.setup({
   ensure_installed = {
@@ -45,9 +47,10 @@ masonlsp.setup({
 
 local on_attach = function(client, bufnr)
   require('lsp.keys').setup(bufnr)
+  require('lsp.highlighting').setup(client)
 end
 
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('lsp.capabilities').create_capabilities()
 
 local lsp_flags = {
   debounce_text_changes = 150, -- default
@@ -63,12 +66,7 @@ masonlsp.setup_handlers({
   end,
 
   -- Targeted overrides here
-  ["sumneko_lua"] = function()
-    lspconfig.sumneko_lua.setup {
-      settings = require('lsp/sumneko_lua'),
-      on_attach = on_attach,
-      capabilities = capabilities,
-      lsp_flags = lsp_flags,
-    }
-  end
+  ["sumneko_lua"] = require('lsp.settings.sumneko_lua').overrides(on_attach, capabilities, lsp_flags)
 })
+
+-- vim:foldmethod=marker:foldlevel=0

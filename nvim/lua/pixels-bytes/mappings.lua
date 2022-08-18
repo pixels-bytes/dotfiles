@@ -15,8 +15,7 @@
 --]]
 
 
-local utils = require('pixels-bytes/utils')
-local map = utils.map
+local map = vim.keymap.set
 
 -- Hardcore Mode {{{
 -- map('i', '<BS>', '<Nop>')
@@ -68,7 +67,6 @@ map('n', '<leader>]', ':bn<cr>')
 
 -- Bookmarks
 map('n', '<leader>dv', ':e ~/.config/nvim/**/*')
-map('n', '<leader>ds', ':e ~/Sites/vue-projects/**/*')
 map('n', '<leader>dh', ':e ~/**')
 
 -- Move blocks
@@ -93,10 +91,11 @@ map('v', '<tab>', '%')
 map('n', '<leader>x', ':!open %<cr><cr>')
 
 -- Diagnostics
-map('n', '<space>e', 'vim.diagnostic.open_float')
-map('n', '[d', 'vim.diagnostic.goto_prev')
-map('n', ']d', 'vim.diagnostic.goto_next')
+map('n', '<space>e', vim.diagnostic.open_float)
+map('n', '[d', vim.diagnostic.goto_prev)
+map('n', ']d', vim.diagnostic.goto_next)
 
 -- Open & Source init.lua
 map('n', '<leader>ev', ':vsp $MYVIMRC<cr>')
 map('n', '<leader>sv', ':luafile %<cr>')
+map('n', '<leader>pl', ':vsp ~/.config/nvim/lua/pixels-bytes/plugins.lua<cr>') 

@@ -60,8 +60,7 @@ require('telescope').setup{
 -- }}}
 
 -- Mappings {{{
-local utils = require('pixels-bytes/utils')
-local map = utils.map
+local map = vim.keymap.set
 
 map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>')
 map('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>')

@@ -7,18 +7,27 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
-
- Filename:   lsp/lua_settings.lua
- Github:     pixels and bytes
+ Filename:   highlighting.lua
+ Github:     pixels and bytes here
  Maintainer: Adam Tait
- Function:   LSP Settings for Lua language
+ About:      LSP highlighting
 --]]
 
 
-return {
-  Lua = {
-    diagnostics = {
-      globals = { "vim" }
-    }
-  }
-}
+local M = {}
+
+M.setup = function (client)
+  if client.resolved_capabilities.document_highlight then
+    vim.api.nvim_exec(
+      [[
+      augroup lsp_document_highlight
+        autocmd! * <buffer>
+        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+      augroup END
+    ]],
+      false
+    )
+  end
+end
+return M

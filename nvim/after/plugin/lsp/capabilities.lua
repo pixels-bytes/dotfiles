@@ -7,14 +7,25 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   terminal.lua
+ Filename:   capabilities.lua
  Github:     pixels and bytes here
  Maintainer: Adam Tait
- About:      Settings for a persistant termainal
+ About:      LSP Capabilities
 --]]
 
 
-local map = vim.keymap.set
+local status_ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+if not status_ok then
+  vim.notify('Problem with cmp_nvim_lsp')
+  return
+end
 
-map('n', '<leader>tt', '<CMD>lua require("FTerm").toggle()<CR>')
-map('t', '<leader>tt', '<c-\\><c-n><CMD>lua require("FTerm").toggle()<CR>')
+local M = {}
+
+M.create_capabilities = function ()
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities.textDocument.completion.completionItem.snippetSupport = true
+  capabilities = cmp_lsp.update_capabilities(capabilities)
+end
+
+return M
