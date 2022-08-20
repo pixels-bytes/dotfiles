@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
   use {'dracula/vim', as='dracula'}
   use {'catppuccin/nvim', as='catppuccin'}
   use 'luisiacc/gruvbox-baby'
-  use 'rebelot/kanagawa.nvim'
+  use "rebelot/kanagawa.nvim"
   use 'shaunsingh/nord.nvim'
 
   -- Interface
@@ -38,9 +38,15 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  -- Movements
+  -- Movements & Mappings
   use 'tpope/vim-surround'
   use 'unblevable/quick-scope'
+  use {
+  "folke/which-key.nvim",
+  config = function()
+    require("which-key").setup {}
+    end
+  }
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
@@ -70,6 +76,14 @@ return require('packer').startup(function(use)
     'neovim/nvim-lspconfig',
   }
 
+  -- Telescope
+  use {
+    { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim'}},
+    {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+    'nvim-telescope/telescope-project.nvim'
+    -- 'nvim-telescope/telescope-file-browser.nvim'
+  }
+
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
@@ -78,14 +92,6 @@ return require('packer').startup(function(use)
 
   --Git
   use 'lewis6991/gitsigns.nvim'
-
-  -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
-  }
-  use 'nvim-telescope/telescope-project.nvim'
-  -- 'nvim-telescope/telescope-file-browser.nvim'
 end)
 -- }}}
 
@@ -93,12 +99,12 @@ end)
 'jose-elias-alvarez/null-ls.nvim'
 'folke/which-key.nvim'
 'folke/trouble.nvim'
-'folke/todo-comments.nvim'
 'folke/twilight.nvim'
 'p00f/clangd_extensions.nvim'
 'pianocomposer321/yabs.nvim'
 'numToStr/Comment.nvim'
 'glepnir/lspsaga.nvim'
+'shaunsingh/nord.nvim'
 'windwp/nvim-autopairs'
 'nvim-pack/nvim-spectre'
 'kosayoda/nvim-lightbulb'

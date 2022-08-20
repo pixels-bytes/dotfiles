@@ -17,7 +17,6 @@
 
 local map = vim.keymap.set
 
--- Hardcore Mode {{{
 -- map('i', '<BS>', '<Nop>')
 -- map('', '<Up>', '<Nop>')
 -- map('', '<Down>', '<Nop>')
@@ -27,10 +26,9 @@ local map = vim.keymap.set
 -- map('', 'j', '<Nop>')
 -- map('', 'k', '<Nop>')
 -- map('', 'l', '<Nop>')
--- }}}
 
 -- Esc & Map Leader
--- map('n', '<SPACE>', '<Nop>')
+map('n', '<SPACE>', '<Nop>')
 vim.g.mapleader = ","
 
 --Quick save
@@ -97,5 +95,5 @@ map('n', ']d', vim.diagnostic.goto_next)
 
 -- Open & Source init.lua
 map('n', '<leader>ev', ':vsp $MYVIMRC<cr>')
-map('n', '<leader>sv', ':luafile %<cr>')
-map('n', '<leader>pl', ':vsp ~/.config/nvim/lua/pixels-bytes/plugins.lua<cr>') 
+map('n', '<leader>so', ':so<cr>')
+map('n', '<leader>pl', ':vsp ~/.config/nvim/lua/pixels-bytes/plugins.lua<cr>')

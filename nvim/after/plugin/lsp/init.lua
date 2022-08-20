@@ -15,8 +15,8 @@
 --]]
 
 --[[
-Todo: Setup DAP
-Todo: Configure json schemas: https://github.com/neovim/nvim-lspconfig/wiki/User-contributed-tips
+TODO: Setup DAP
+TODO: Configure json schemas: https://github.com/neovim/nvim-lspconfig/wiki/User-contributed-tips
 --]]
 
 

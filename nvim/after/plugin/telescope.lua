@@ -66,16 +66,20 @@ map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>')
 map('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>')
 map('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>')
 map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>')
+map('n', '<leader>fm', '<cmd>lua require("telescope.builtin").marks()<cr>')
+map('n', '<leader>fc', '<cmd>lua require("telescope.builtin").colorscheme()<cr>')
+map('n', '<leader>fq', '<cmd>lua require("telescope.builtin").quickfix()<cr>')
+map('n', '<leader>fl', '<cmd>lua require("telescope.builtin").jumplist()<cr>')
+map('n', '<leader>fr', '<cmd>lua require("telescope.builtin").lsp_references()<cr>')
+-- TODO: add fr to list references
+-- TODO: add fg to list git branches
 -- }}}
 
 -- Projects Extension {{{
+require('telescope').load_extension('fzf')
+
 require'telescope'.load_extension('project')
-map(
-  'n',
-  '<leader>fp',
-  '<cmd>lua require("telescope").extensions.project.project{change_dir = true}<cr>',
-  {silent = true}
-)
+map('n', '<leader>fp', '<cmd>lua require("telescope").extensions.project.project{change_dir = true}<cr>', {silent = true})
 -- }}}
 
 -- vim:foldmethod=marker:foldlevel=0
