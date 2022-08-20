@@ -10,9 +10,10 @@
  Filename:   plugins.lua
  Github:     pixels and bytes here
  Maintainer: Adam Tait
- About:      Where nvim get spicy
+ About:      Where nvim gets spicy
 --]]
 
+-- Find more here: https://github.com/rockerBOO/awesome-neovim
 
 -- Plugins (conf/pluglist) {{{
 return require('packer').startup(function(use)
@@ -47,6 +48,7 @@ return require('packer').startup(function(use)
       require("which-key").setup {}
     end
   }
+  use 'windwp/nvim-autopairs'
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
@@ -100,7 +102,7 @@ end)
 
 --[[ Other/ Movements/ Interface {{{
 'jose-elias-alvarez/null-ls.nvim'
-'folke/which-key.nvim'
+'chentoast/marks.nvim'
 'folke/trouble.nvim'
 'folke/twilight.nvim'
 'p00f/clangd_extensions.nvim'
@@ -108,7 +110,6 @@ end)
 'numToStr/Comment.nvim'
 'glepnir/lspsaga.nvim'
 'shaunsingh/nord.nvim'
-'windwp/nvim-autopairs'
 'nvim-pack/nvim-spectre'
 'kosayoda/nvim-lightbulb'
 'mbbill/undotree'
