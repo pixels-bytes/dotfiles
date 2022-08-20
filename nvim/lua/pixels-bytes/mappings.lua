@@ -27,9 +27,10 @@ local map = vim.keymap.set
 -- map('', 'k', '<Nop>')
 -- map('', 'l', '<Nop>')
 
--- Esc & Map Leader
-map('n', '<SPACE>', '<Nop>')
-vim.g.mapleader = ","
+-- Map Leader, Local Leader, and Colon
+-- map('n', '<SPACE>', '<Nop>')
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 --Quick save
 map('n', '<leader>w', ':w<cr>')
@@ -45,7 +46,7 @@ map('n', '<C-l>', '<C-w>l')
 map('n', '<C-\\>', ':vsplit<cr> :terminal<cr> i')
 
 -- Open netrw to the left
-map('n', '<leader>e', ':Lex 30<cr>')
+map('n', '<leader>e', ':Lex 35<cr>')
 
 -- Resizing
 map('n', '<S-Up>', ':resize -2<cr>')

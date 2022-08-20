@@ -24,8 +24,8 @@ return require('packer').startup(function(use)
 
   -- Themes
   use 'folke/tokyonight.nvim'
-  use {'dracula/vim', as='dracula'}
-  use {'catppuccin/nvim', as='catppuccin'}
+  use { 'dracula/vim', as = 'dracula' }
+  use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'luisiacc/gruvbox-baby'
   use "rebelot/kanagawa.nvim"
   use 'shaunsingh/nord.nvim'
@@ -42,9 +42,9 @@ return require('packer').startup(function(use)
   use 'tpope/vim-surround'
   use 'unblevable/quick-scope'
   use {
-  "folke/which-key.nvim",
-  config = function()
-    require("which-key").setup {}
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {}
     end
   }
 
@@ -64,7 +64,7 @@ return require('packer').startup(function(use)
     'saadparwaiz1/cmp_luasnip',
     {
       'tzachar/cmp-tabnine',
-      run='./install.sh',
+      run = './install.sh',
       requires = 'hrsh7th/nvim-cmp'
     }
   }
@@ -78,14 +78,17 @@ return require('packer').startup(function(use)
 
   -- Telescope
   use {
-    { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim'}},
-    {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+    { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } },
+    { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
     'nvim-telescope/telescope-project.nvim'
     -- 'nvim-telescope/telescope-file-browser.nvim'
   }
 
   -- Treesitter
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {
+    { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
+    'p00f/nvim-ts-rainbow',
+  }
 
   -- Terminal
   use 'numtostr/FTerm.nvim'

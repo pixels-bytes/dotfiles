@@ -60,6 +60,7 @@ require('telescope').setup{
 -- }}}
 
 -- Mappings {{{
+-- Default mappings: https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/mappings.lua
 local map = vim.keymap.set
 
 map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>')
@@ -71,8 +72,7 @@ map('n', '<leader>fc', '<cmd>lua require("telescope.builtin").colorscheme()<cr>'
 map('n', '<leader>fq', '<cmd>lua require("telescope.builtin").quickfix()<cr>')
 map('n', '<leader>fl', '<cmd>lua require("telescope.builtin").jumplist()<cr>')
 map('n', '<leader>fr', '<cmd>lua require("telescope.builtin").lsp_references()<cr>')
--- TODO: add fr to list references
--- TODO: add fg to list git branches
+map('n', '<leader>fd', '<cmd>lua require("telescope.builtin").lsp_definitions()<cr>')
 -- }}}
 
 -- Projects Extension {{{
