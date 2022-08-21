@@ -7,7 +7,6 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
-
  Filename:   mappings.lua
  Github:     pixels and bytes here
  Maintainer: Adam Tait
@@ -27,10 +26,11 @@ local map = vim.keymap.set
 -- map('', 'k', '<Nop>')
 -- map('', 'l', '<Nop>')
 
--- Map Leader, Local Leader, and Colon
+-- Map Leader, Local Leader, and Spacebar
 -- map('n', '<SPACE>', '<Nop>')
-vim.g.mapleader = " "
+vim.g.mapleader = ","
 vim.g.maplocalleader = "\\"
+map('n', '<space>', 'ciw')
 
 --Quick save
 map('n', '<leader>w', ':w<cr>')
