@@ -32,12 +32,15 @@ return require('packer').startup(function(use)
   use 'shaunsingh/nord.nvim'
 
   -- Interface
-  use 'mhinz/vim-startify'
-  use 'psliwka/vim-smoothie'
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' }
+  }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  use 'psliwka/vim-smoothie'
 
   -- Movements & Mappings
   use 'tpope/vim-surround'
