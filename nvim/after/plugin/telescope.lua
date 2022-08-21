@@ -14,8 +14,14 @@
 --]]
 
 
+local status_ok, telescope = pcall(require, 'telescope')
+if not status_ok then
+  vim.notify("Problem with Telescope")
+  return
+end
+
 -- Settings {{{
-require('telescope').setup{
+telescope.setup{
   defaults = {
     vimgrep_arguments = {
       'rg',
@@ -76,10 +82,13 @@ map('n', '<leader>fd', '<cmd>lua require("telescope.builtin").lsp_definitions()<
 -- }}}
 
 -- Projects Extension {{{
-require('telescope').load_extension('fzf')
+telescope.load_extension('fzf')
 
-require'telescope'.load_extension('project')
+telescope.load_extension('project')
 map('n', '<leader>fp', '<cmd>lua require("telescope").extensions.project.project{change_dir = true}<cr>', {silent = true})
+
+telescope.load_extension('file_browser')
+map('n', '<leader>fn', '<cmd>lua require("telescope").extensions.file_browser.file_browser()<cr>', { noremap = true })
 -- }}}
 
 -- vim:foldmethod=marker:foldlevel=0

@@ -85,8 +85,9 @@ return require('packer').startup(function(use)
   use {
     { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } },
     { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-    'nvim-telescope/telescope-project.nvim'
-    -- 'nvim-telescope/telescope-file-browser.nvim'
+    'BurntSushi/ripgrep',
+    'nvim-telescope/telescope-project.nvim',
+    'nvim-telescope/telescope-file-browser.nvim'
   }
 
   -- Treesitter
@@ -112,9 +113,9 @@ end)
 'pianocomposer321/yabs.nvim'
 'numToStr/Comment.nvim'
 'glepnir/lspsaga.nvim'
-'shaunsingh/nord.nvim'
 'nvim-pack/nvim-spectre'
 'kosayoda/nvim-lightbulb'
 'mbbill/undotree'
 --]]
+
 -- vim:foldmethod=marker:foldlevel=1
