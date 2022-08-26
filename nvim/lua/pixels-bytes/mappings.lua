@@ -17,20 +17,21 @@
 local map = vim.keymap.set
 
 -- map('i', '<BS>', '<Nop>')
--- map('', '<Up>', '<Nop>')
--- map('', '<Down>', '<Nop>')
--- map('', '<Left>', '<Nop>')
--- map('', '<Right>', '<Nop>')
--- map('', 'h', '<Nop>')
--- map('', 'j', '<Nop>')
--- map('', 'k', '<Nop>')
--- map('', 'l', '<Nop>')
+map('', '<Up>', '<Nop>')
+map('', '<Down>', '<Nop>')
+map('', '<Left>', '<Nop>')
+map('', '<Right>', '<Nop>')
+--map('', 'h', '<Nop>')
+--map('', 'j', '<Nop>')
+--map('', 'k', '<Nop>')
+--map('', 'l', '<Nop>')
 
 -- Map Leader, Local Leader, and Spacebar
--- map('n', '<SPACE>', '<Nop>')
-vim.g.mapleader = ","
+-- map('n', '<space>', 'ciw')
+map('n', '<SPACE>', '<Nop>')
+vim.g.mapleader = ' '
 vim.g.maplocalleader = "\\"
-map('n', '<space>', 'ciw')
+map('i', 'jj', '<esc>')
 
 --Quick save
 map('n', '<leader>w', ':w<cr>')
