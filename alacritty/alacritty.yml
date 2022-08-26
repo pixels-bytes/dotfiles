@@ -4,12 +4,15 @@
 env:
   TERM: xterm-256color
 
+
 window:
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: true
+  dynamic_padding: false
 
   # Startup Mode (changes require restart)
   startup_mode: Fullscreen
+  
+  decorations: none
 
 # Sample Font configuration for font: Monoid.
 # Feel free to use different font configuration family & face for each sections
@@ -20,18 +23,25 @@ font:
   # UI for powerline & tmux bottom bar.
   normal:
     # Font name
-    family: JetBrains Mono
-
+    family: Fira Code
+    antialias: true
+  bold:
+    family: Fira Code
+    style: bold
+  italic:
+    family: Fira Code
+    style: italic
+  
   # Font size
-  size: 14
-  line_height: 100%
+  size: 13.5
+  line_height: 125%
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing
   # I've given in 14 spacing which fits really well with my fonts, you may change it
   # to your convenience but make sure to adjust 'glyph_offset' appropriately post that
   offset:
     x: 0
-    y: 14
+    y: 4
 
   # Note: This requires RESTART
   # By default when you change the offset above you'll see an issue, where the texts are bottom
@@ -40,7 +50,7 @@ font:
   glyph_offset:
     x: 0
     # Keeping this as half of offset to vertically align the text in cursor
-    y: 7
+    y: 2
 
   # Better font rendering for mac
   use_thin_strokes: true
@@ -72,6 +82,6 @@ import:
   # /Users/abu/.config/alacritty/dracula.yml
   # /Users/abu/.config/alacritty/catppuccin.yml
   # /Users/abu/.config/alacritty/tokyonight.yml
-  # /Users/abu/.config/alacritty/nord.yml
+  - /Users/abu/.config/alacritty/nord.yml
   # /Users/abu/.config/alacritty/embark.yml
-  - /Users/abu/.config/alacritty/gruvbox-yml
+  # /Users/abu/.config/alacritty/gruvbox-yml
