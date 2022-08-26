@@ -11,9 +11,9 @@ normal = "block"
 select = "underline"
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-type"]
+left = ["mode", "spinner", "file-name"]
+center = ["diagnostics"]
+right = ["selections", "position", "file-encoding", "file-type"]
 
 [editor.lsp]
 display-messages = true
