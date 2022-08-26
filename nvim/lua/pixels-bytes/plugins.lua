@@ -29,7 +29,7 @@ return require('packer').startup(function(use)
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'luisiacc/gruvbox-baby'
   use "rebelot/kanagawa.nvim"
-  use 'shaunsingh/nord.nvim'
+  use 'andersevenrud/nordic.nvim'
 
   -- Interface
   use {
@@ -105,6 +105,8 @@ end)
 -- }}}
 
 --[[ Other/ Movements/ Interface {{{
+tim popes plugins
+'vim-lion'
 'jose-elias-alvarez/null-ls.nvim'
 'chentoast/marks.nvim'
 'folke/trouble.nvim'

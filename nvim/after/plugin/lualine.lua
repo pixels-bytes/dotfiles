@@ -21,7 +21,7 @@ end
 
 require('lualine').setup({
   options = {
-    theme = 'gruvbox-baby'
+    theme = 'nord'
   },
   sections = {
     lualine_c = { pnb, 'filename' }

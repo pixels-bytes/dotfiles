@@ -1,4 +1,4 @@
-theme = "gruvbox"
+theme = "nord"
 
 [editor]
 true-color = true
@@ -10,6 +10,11 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-type"]
+
 [editor.lsp]
 display-messages = true
 
@@ -17,4 +22,4 @@ display-messages = true
 "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
 
 [keys.insert]
-k = { j = "normal_mode" }
+j = { j = "normal_mode" }
