@@ -22,3 +22,4 @@ TODO: Configure json schemas: https://github.com/neovim/nvim-lspconfig/wiki/User
 
 require('lsp.mason')
 require('lsp.mason-lsp')
+require('lsp.diagnostics').setup()
