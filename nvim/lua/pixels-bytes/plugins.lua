@@ -43,7 +43,6 @@ return require('packer').startup(function(use)
   use 'psliwka/vim-smoothie'
 
   -- Movements & Mappings
-  use 'tpope/vim-surround'
   use 'unblevable/quick-scope'
   use {
     "folke/which-key.nvim",
@@ -52,6 +51,13 @@ return require('packer').startup(function(use)
     end
   }
   use 'windwp/nvim-autopairs'
+  use {
+    'kylechui/nvim-surround',
+    tag = "*",
+    config = function()
+      require('nvim-surround').setup({})
+    end
+  }
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
