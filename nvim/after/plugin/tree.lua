@@ -14,6 +14,8 @@
 --]]
 
 
+-- TODO: Read through docs for config
+
 local status_ok, tree = pcall(require, 'nvim-tree')
 if not status_ok then
   vim.notify('Problem with nvim-tree')

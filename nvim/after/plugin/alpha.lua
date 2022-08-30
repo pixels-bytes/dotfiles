@@ -14,6 +14,7 @@
 --]]
 
 
+-- TODO: go through docs and configure propertly.
 local alpha = require('alpha')
 local startify = require('alpha.themes.startify')
 

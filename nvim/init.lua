@@ -14,6 +14,9 @@
 --]]
 
 
+--TODO: Setup comments
+--(https://www.youtube.com/watch?v=aH50njzReXQ&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=13)
+
 -- Allow require to look in after/plugin folder
 local home_dir = os.getenv("HOME")
 package.path = home_dir .. "/.config/nvim/after/plugin/?.lua;" .. package.path
