@@ -16,6 +16,6 @@
 
 
 require('pixels-bytes/vanilla')
-require('pixels-bytes/mappings')
+require('pixels-bytes/keymaps')
 require('pixels-bytes/commands')
 require('pixels-bytes/packer')
