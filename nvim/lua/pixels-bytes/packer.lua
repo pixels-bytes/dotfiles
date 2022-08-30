@@ -7,7 +7,7 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   plugins.lua
+ Filename:   packer.lua
  Github:     pixels and bytes here
  Maintainer: Adam Tait
  About:      Where nvim gets spicy
@@ -38,6 +38,10 @@ return require('packer').startup(function(use)
   }
   use {
     'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use {
+    'kyazdani42/nvim-tree.lua',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use 'psliwka/vim-smoothie'

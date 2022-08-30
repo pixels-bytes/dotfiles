@@ -18,4 +18,4 @@
 require('pixels-bytes/vanilla')
 require('pixels-bytes/mappings')
 require('pixels-bytes/commands')
-require('pixels-bytes/plugins')
+require('pixels-bytes/packer')
