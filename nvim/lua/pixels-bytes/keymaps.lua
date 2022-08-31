@@ -16,46 +16,70 @@
 
 local keymap = vim.keymap.set
 
--- map('i', '<BS>', '<Nop>')
 keymap('', '<Up>', '<Nop>')
 keymap('', '<Down>', '<Nop>')
 keymap('', '<Left>', '<Nop>')
 keymap('', '<Right>', '<Nop>')
---map('', 'h', '<Nop>')
---map('', 'j', '<Nop>')
---map('', 'k', '<Nop>')
---map('', 'l', '<Nop>')
 
 -- Map Leader, Local Leader, and Spacebar
-keymap('n', '<SPACE>', '<Nop>')
 keymap('n', '<SPACE>', ':')
 vim.g.mapleader = ','
-vim.g.maplocalleader = ';'
+vim.g.maplocalleader = '\\'
 keymap('i', 'jj', '<esc>')
 
+-- Some simple handy pairings
+-- https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt
+keymap('n', '[a', '<cmd>previous<cr>')
+keymap('n', ']a', '<cmd>next<cr>')
+keymap('n', '[A', '<cmd>first<cr>')
+keymap('n', ']A', '<cmd>last<cr>')
+keymap('n', '[b', '<cmd>bprevious<cr>')
+keymap('n', ']b', '<cmd>bnext<cr>')
+keymap('n', '[B', '<cmd>bfirst<cr>')
+keymap('n', ']B', '<cmd>blast<cr>')
+keymap('n', '[l', '<cmd>lprevious<cr>')
+keymap('n', ']l', '<cmd>lnext<cr>')
+keymap('n', '[L', '<cmd>lfirst<cr>')
+keymap('n', ']L', '<cmd>llast<cr>')
+keymap('n', '[<c-L>', '<cmd>lpfile<cr>')
+keymap('n', ']<c-L>', '<cmd>lnfile<cr>')
+keymap('n', '[q', '<cmd>cprevious<cr>')
+keymap('n', ']q', '<cmd>cnext<cr>')
+keymap('n', '[Q', '<cmd>cfirst<cr>')
+keymap('n', ']Q', '<cmd>clast<cr>')
+keymap('n', '[<c-Q>', '<cmd>cpfile<cr>')
+keymap('n', ']<c-Q>', '<cmd>cnfile<cr>')
+keymap('n', '[t', '<cmd>tprevious<cr>')
+keymap('n', ']t', '<cmd>tnext<cr>')
+keymap('n', '[T', '<cmd>tfirst<cr>')
+keymap('n', ']T', '<cmd>tlast<cr>')
+keymap('n', '[<c-T>', '<cmd>ptprevious<cr>')
+keymap('n', ']<c-T>', '<cmd>ptnext<cr>')
+keymap('n', '[<space>', 'O<esc>j')
+keymap('n', ']<space>', 'o<esc>k')
+keymap('n', '[e', 'ddkP')
+keymap('n', ']e', 'ddp')
+
 -- Better window navigation
--- keymap('n', '<tab>', '<C-w>w')
-keymap('n', '<up>', '<C-w><up>')
-keymap('n', '<down>', '<C-w><down>')
-keymap('n', '<left>', '<C-w><left>')
-keymap('n', '<right>', '<C-w><right>')
+keymap('n', '<tab>', '<C-w>w')
 
 -- Open netrw to the left
-keymap('n', '<leader>m', ':Lex 35<cr>')
+keymap('n', '<leader>e', ':Lex 35<cr>')
 
 -- Terminal
 keymap('n', '<C-\\>', ':vsplit<cr> :terminal<cr> i')
 
 -- Resizing
-keymap('n', '<S-Up>', ':resize -2<cr>')
-keymap('n', '<S-Down>', ':resize +2<cr>')
-keymap('n', '<S-Left>', ':vertical resize -2<cr>')
-keymap('n', '<S-Right>', ':vertical resize +2<cr>')
+keymap('n', '<C-Up>', ':resize -2<cr>')
+keymap('n', '<C-Down>', ':resize +2<cr>')
+keymap('n', '<C-Left>', ':vertical resize -2<cr>')
+keymap('n', '<C-Right>', ':vertical resize +2<cr>')
 
 -- Args & Buffers
 keymap('n', '<leader>a', ':arga <c-r>=fnameescape(expand("%:p:h"))<cr>/*<c-d>')
 keymap('n', '<bs>', '<c-^>\'"zz')
-keymap('n', '<leader>bD', ':%bd|e#<cr>')
+keymap('n', 'bd', '<cmd>bd<cr>')
+keymap('n', 'bD', ':%bd|e#<cr>')
 
 -- Bookmarks
 keymap('n', '<leader>dv', ':e ~/.config/nvim/**/*')
@@ -76,8 +100,8 @@ keymap('x', 'K', ':m \'<-2<CR>gv-gv')
 -- Find & Search
 keymap('n', '<leader>f', ':find<space>')
 keymap('n', '<leader><space>', ':noh<cr>')
-keymap('n', '<tab>', '%')
-keymap('v', '<tab>', '%')
+-- keymap('n', '<tab>', '%')
+-- keymap('v', '<tab>', '%')
 
 -- Open current file in default program
 keymap('n', '<leader>x', ':!open %<cr><cr>')
@@ -89,4 +113,4 @@ keymap('n', ']d', vim.diagnostic.goto_next)
 
 -- Open & Source init.lua
 keymap('n', '<leader>ev', ':vsp $MYVIMRC<cr>')
-keymap('n', '<leader>pl', ':vsp ~/.config/nvim/lua/pixels-bytes/plugins.lua<cr>')
+keymap('n', '<leader>pl', ':vsp ~/.config/nvim/lua/pixels-bytes/packer.lua<cr>')

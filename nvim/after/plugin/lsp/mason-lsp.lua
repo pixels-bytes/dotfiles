@@ -46,7 +46,7 @@ masonlsp.setup({
 })
 
 local on_attach = function(client, bufnr)
-  require('lsp.keys').setup(bufnr)
+  require('lsp.keymaps').setup(bufnr)
   require('lsp.highlighting').setup(client)
 end
 

@@ -16,5 +16,15 @@
 
 local map = vim.keymap.set
 
-map('n', '<leader>tt', '<CMD>lua require("FTerm").toggle()<CR>')
-map('t', '<leader>tt', '<c-\\><c-n><CMD>lua require("FTerm").toggle()<CR>')
+local keymap = vim.keymap.set
+
+fterm.setup({
+  dimensions = {
+    y = 0.3,
+    height = 0.9,
+    width = 0.9,
+  },
+})
+
+keymap('n', '<C-\\>', '<CMD>lua require("FTerm").toggle()<CR>')
+keymap('t', '<C-\\>', '<c-\\><c-n><CMD>lua require("FTerm").toggle()<CR>')
