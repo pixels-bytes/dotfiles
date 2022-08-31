@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
 
   -- File System
   use 'airblade/vim-rooter'
+  use 'lewis6991/impatient.nvim'
 
   -- Themes
   use 'folke/tokyonight.nvim'
@@ -123,18 +124,8 @@ end)
 -- }}}
 
 --[[ Other/ Movements/ Interface {{{
-tim popes plugins
-'vim-lion'
 'jose-elias-alvarez/null-ls.nvim'
-'chentoast/marks.nvim'
-'folke/twilight.nvim'
-'p00f/clangd_extensions.nvim'
-'pianocomposer321/yabs.nvim'
 'numToStr/Comment.nvim'
-'glepnir/lspsaga.nvim'
-'nvim-pack/nvim-spectre'
-'kosayoda/nvim-lightbulb'
-'mbbill/undotree'
 --]]
 
 -- vim:foldmethod=marker:foldlevel=1
