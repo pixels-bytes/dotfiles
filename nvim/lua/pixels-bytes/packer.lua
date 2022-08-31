@@ -65,6 +65,7 @@ return require('packer').startup(function(use)
       require('nvim-surround').setup({})
     end
   }
+  use 'numToStr/Comment.nvim'
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
@@ -107,6 +108,7 @@ return require('packer').startup(function(use)
   use {
     { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
     'p00f/nvim-ts-rainbow',
+    'JoosepAlviste/nvim-ts-context-commentstring'
   }
 
   -- Diagnostics
