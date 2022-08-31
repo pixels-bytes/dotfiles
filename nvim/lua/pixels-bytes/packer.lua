@@ -8,8 +8,6 @@
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
  Filename:   packer.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
  About:      Where nvim gets spicy
 --]]
 
@@ -58,13 +56,7 @@ return require('packer').startup(function(use)
     end
   }
   use 'windwp/nvim-autopairs'
-  use {
-    'kylechui/nvim-surround',
-    tag = "*",
-    config = function()
-      require('nvim-surround').setup({})
-    end
-  }
+  use { 'kylechui/nvim-surround', tag = "*" }
   use 'numToStr/Comment.nvim'
 
   -- Snippets
