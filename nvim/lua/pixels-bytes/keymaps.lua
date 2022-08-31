@@ -104,7 +104,7 @@ keymap('n', '<leader><space>', ':noh<cr>')
 -- keymap('v', '<tab>', '%')
 
 -- Open current file in default program
-keymap('n', '<leader>x', ':!open %<cr><cr>')
+keymap('n', '<leader>xo', ':!open %<cr><cr>')
 
 -- Diagnostics
 keymap('n', '\\e', vim.diagnostic.open_float)

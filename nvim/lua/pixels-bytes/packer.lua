@@ -107,6 +107,12 @@ return require('packer').startup(function(use)
     'p00f/nvim-ts-rainbow',
   }
 
+  -- Diagnostics
+  use {
+    'folke/trouble.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons'}
+  }
+
   -- Terminal
   use 'numtostr/FTerm.nvim'
 
@@ -120,7 +126,6 @@ tim popes plugins
 'vim-lion'
 'jose-elias-alvarez/null-ls.nvim'
 'chentoast/marks.nvim'
-'folke/trouble.nvim'
 'folke/twilight.nvim'
 'p00f/clangd_extensions.nvim'
 'pianocomposer321/yabs.nvim'
