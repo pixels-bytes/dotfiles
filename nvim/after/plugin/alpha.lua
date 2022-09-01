@@ -71,14 +71,12 @@ local datetime = {
 -- HACK: refactor options output
 -- HACK: combine datetime, pluginCount, and version into an 'info' section
 -- NOTE: https://github.com/emuel-vassallo/dotfiles/blob/main/.config/nvim/lua/plugins/configs/alpha.lua
-
 dashboard.section.header.val = logo
 dashboard.section.pluginCount = pluginCount
 dashboard.section.datetime = datetime
 dashboard.section.version = version
 dashboard.section.buttons.val = {
-  -- TODO: Install and configure Shatur/neovim-session-manager or folke/persistence.nvim
-  dashboard.button('r', ' Restore', ''),
+  dashboard.button('r', ' Restore', '<cmd>lua require("persistence").load({ last = true })<cr>'),
   dashboard.button('e', ' New file', ':ene <bar> startinsert <cr>'),
   dashboard.button('p', ' Projects', ':Telescope project<cr>'),
   dashboard.button('m', ' MRU', ':Telescope oldfiles<cr>'),

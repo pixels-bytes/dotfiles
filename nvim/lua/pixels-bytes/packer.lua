@@ -21,6 +21,9 @@ return require('packer').startup(function(use)
   -- File System
   use 'airblade/vim-rooter'
   use 'lewis6991/impatient.nvim'
+  use {"folke/persistence.nvim",
+    event = "BufReadPre", -- this will only start session saving when an actual file was opened
+    module = "persistence"
 
   -- Themes
   use 'folke/tokyonight.nvim'
@@ -47,7 +50,7 @@ return require('packer').startup(function(use)
   use 'psliwka/vim-smoothie'
   use 'folke/twilight.nvim'
 
-  -- Movements & Mappings
+  -- Sugar
   use 'unblevable/quick-scope'
   use {
     "folke/which-key.nvim",
