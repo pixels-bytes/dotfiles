@@ -24,13 +24,11 @@ return require('packer').startup(function(use)
   use {"folke/persistence.nvim",
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
     module = "persistence"
+  }
 
   -- Themes
-  use 'folke/tokyonight.nvim'
-  use { 'dracula/vim', as = 'dracula' }
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'luisiacc/gruvbox-baby'
-  use "rebelot/kanagawa.nvim"
   use 'andersevenrud/nordic.nvim'
 
   -- Interface
@@ -52,12 +50,7 @@ return require('packer').startup(function(use)
 
   -- Sugar
   use 'unblevable/quick-scope'
-  use {
-    "folke/which-key.nvim",
-    config = function()
-      require("which-key").setup {}
-    end
-  }
+  use 'folke/which-key.nvim'
   use 'windwp/nvim-autopairs'
   use { 'kylechui/nvim-surround', tag = "*" }
   use 'numToStr/Comment.nvim'
