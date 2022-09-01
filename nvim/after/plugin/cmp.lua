@@ -17,7 +17,7 @@
 local has_words_before = function()
   -- May have to change from sumneko_lua to LuaJIT
   -- https://www.reddit.com/r/neovim/comments/syjqdp/lua_lsp_unpack_is_shown_as_deprecated/
-  table.unpack = table.unpack or unpack -- 5.1 compatibility
+  table.unpack = table.unpack or unpack -- FIX: 5.1 compatibility
   local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end

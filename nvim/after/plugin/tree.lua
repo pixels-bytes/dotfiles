@@ -15,6 +15,7 @@
 
 
 -- TODO: Read through docs for config
+-- FIX: Performance issue opening and closing nvim-tree
 
 local status_ok, tree = pcall(require, 'nvim-tree')
 if not status_ok then
