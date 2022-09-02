@@ -1,4 +1,7 @@
 --[[
+--
+--
+--
  ________  ________  ___  ___  ___       __   ________  ________  ___  ___
 |\   __  \|\   __  \|\  \|\  \|\  \     |\  \|\   __  \|\   __  \|\  \|\  \
 \ \  \|\  \ \  \|\ /\ \  \\\  \ \  \    \ \  \ \  \|\  \ \  \|\ /\ \  \\\  \
@@ -18,7 +21,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- File System
+  -- System
   use 'airblade/vim-rooter'
   use 'lewis6991/impatient.nvim'
   use {"folke/persistence.nvim",
@@ -47,7 +50,6 @@ return require('packer').startup(function(use)
   use 'akinsho/bufferline.nvim'
   use 'psliwka/vim-smoothie'
   use 'folke/twilight.nvim'
-  use 'chentoast/marks.nvim'
 
   -- Sugar
   use 'unblevable/quick-scope'
@@ -55,6 +57,8 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use { 'kylechui/nvim-surround', tag = "*" }
   use 'numToStr/Comment.nvim'
+  use 'chentoast/marks.nvim'
+  use 'ThePrimeagen/harpoon'
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'

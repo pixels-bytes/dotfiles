@@ -67,28 +67,31 @@ telescope.setup{
 
 -- Mappings {{{
 -- Default mappings: https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/mappings.lua
-local map = vim.keymap.set
+local keymap = vim.keymap.set
 
-map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>')
-map('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>')
-map('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>')
-map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>')
-map('n', '<leader>fm', '<cmd>lua require("telescope.builtin").marks()<cr>')
-map('n', '<leader>fc', '<cmd>lua require("telescope.builtin").colorscheme()<cr>')
-map('n', '<leader>fq', '<cmd>lua require("telescope.builtin").quickfix()<cr>')
-map('n', '<leader>fl', '<cmd>lua require("telescope.builtin").jumplist()<cr>')
-map('n', '<leader>fr', '<cmd>lua require("telescope.builtin").lsp_references()<cr>')
-map('n', '<leader>fd', '<cmd>lua require("telescope.builtin").lsp_definitions()<cr>')
+keymap('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>')
+keymap('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>')
+keymap('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>')
+keymap('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>')
+keymap('n', '<leader>fm', '<cmd>lua require("telescope.builtin").marks()<cr>')
+keymap('n', '<leader>fc', '<cmd>lua require("telescope.builtin").colorscheme()<cr>')
+keymap('n', '<leader>fq', '<cmd>lua require("telescope.builtin").quickfix()<cr>')
+keymap('n', '<leader>fl', '<cmd>lua require("telescope.builtin").jumplist()<cr>')
+keymap('n', '<leader>fr', '<cmd>lua require("telescope.builtin").lsp_references()<cr>')
+keymap('n', '<leader>fd', '<cmd>lua require("telescope.builtin").lsp_definitions()<cr>')
 -- }}}
 
 -- Projects Extension {{{
 telescope.load_extension('fzf')
 
 telescope.load_extension('project')
-map('n', '<leader>fp', '<cmd>lua require("telescope").extensions.project.project{change_dir = true}<cr>', {silent = true})
+keymap('n', '<leader>fp', '<cmd>lua require("telescope").extensions.project.project{change_dir = true}<cr>', {silent = true})
 
 telescope.load_extension('file_browser')
-map('n', '<leader>fn', '<cmd>lua require("telescope").extensions.file_browser.file_browser()<cr>', { noremap = true })
+keymap('n', '<leader>fn', '<cmd>lua require("telescope").extensions.file_browser.file_browser()<cr>', { noremap = true })
+
+telescope.load_extension('harpoon')
+keymap('n', '<leader>mt', '<cmd>Telescope harpoon marks<cr>')
 -- }}}
 
 -- vim:foldmethod=marker:foldlevel=0
