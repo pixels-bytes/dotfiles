@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
   use 'akinsho/bufferline.nvim'
   use 'psliwka/vim-smoothie'
   use 'folke/twilight.nvim'
+  use 'chentoast/marks.nvim'
 
   -- Sugar
   use 'unblevable/quick-scope'

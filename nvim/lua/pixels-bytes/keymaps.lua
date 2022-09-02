@@ -110,7 +110,3 @@ keymap('n', '<leader>xo', ':!open %<cr><cr>')
 keymap('n', '\\e', vim.diagnostic.open_float)
 keymap('n', '[d', vim.diagnostic.goto_prev)
 keymap('n', ']d', vim.diagnostic.goto_next)
-
--- Open & Source init.lua
-keymap('n', '<leader>ev', ':vsp $MYVIMRC<cr>')
-keymap('n', '<leader>pl', ':vsp ~/.config/nvim/lua/pixels-bytes/packer.lua<cr>')
