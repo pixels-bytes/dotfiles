@@ -7,11 +7,10 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   treesitter.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Treesitter settings
---]]
+    Filename: treesitter.lua
+    Config:   https://github.com/nvim-treesitter/nvim-treesitter#modules
+    Doc:      https://github.com/nvim-treesitter/nvim-treesitter/blob/master/doc/nvim-treesitter.txt
+]]
 
 
 local status_ok, ts = pcall(require, 'nvim-treesitter.configs')

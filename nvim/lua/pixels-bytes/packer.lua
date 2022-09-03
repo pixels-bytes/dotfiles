@@ -1,7 +1,4 @@
 --[[
---
---
---
  ________  ________  ___  ___  ___       __   ________  ________  ___  ___
 |\   __  \|\   __  \|\  \|\  \|\  \     |\  \|\   __  \|\   __  \|\  \|\  \
 \ \  \|\  \ \  \|\ /\ \  \\\  \ \  \    \ \  \ \  \|\  \ \  \|\ /\ \  \\\  \
@@ -10,11 +7,13 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   packer.lua
- About:      Where nvim gets spicy
---]]
+    Filename: packer.lua
+    Config:   https://github.com/wbthomason/packer.nvim#quickstart
+    Doc:      https://github.com/wbthomason/packer.nvim/blob/master/doc/packer.txt
 
--- Find more here: https://github.com/rockerBOO/awesome-neovim
+    NOTE: Awesome plugin list: https://github.com/rockerBOO/awesome-neovim
+]]
+
 
 -- Plugins (conf/pluglist) {{{
 return require('packer').startup(function(use)
@@ -122,10 +121,5 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
 end)
 -- }}}
-
---[[ Other/ Movements/ Interface {{{
-'jose-elias-alvarez/null-ls.nvim'
-'numToStr/Comment.nvim'
---]]
 
 -- vim:foldmethod=marker:foldlevel=1

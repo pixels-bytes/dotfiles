@@ -7,9 +7,9 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   impatient.lua
- Config:     https://github.com/lewis6991/impatient.nvim#configuration
---]]
+    Filename: impatient.lua
+    Config:   https://github.com/lewis6991/impatient.nvim#configuration
+]]
 
 
 local status_ok, _ = pcall(require, 'impatient')

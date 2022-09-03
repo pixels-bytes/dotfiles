@@ -7,12 +7,9 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
-
- Filename:   lsp/settings/sumneko_lua.lua
- Github:     pixels and bytes
- Maintainer: Adam Tait
- Function:   LSP Settings for Lua language
---]]
+    Filename: lsp/settings/sumneko_lua.lua
+    Function: LSP Settings for Lua language
+]]
 
 
 local status_ok, lspconfig = pcall(require, "lspconfig")

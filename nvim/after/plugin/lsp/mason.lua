@@ -7,12 +7,12 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
+    Filename: lsp/mason.lua
+    Config:   https://github.com/williamboman/mason.nvim#configuration
+    Doc:      https://github.com/williamboman/mason.nvim/blob/main/doc/mason.txt
 
- Filename:   lsp/mason.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- Function:   Entry point for mason settings
---]]
+    TODO: Configure with nvim-dap
+]]
 
 
 local status_ok, mason = pcall(require, "mason")

@@ -7,11 +7,10 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
---  Filename:   telescope.lua
---  Github:     pixels and bytes here
---  Maintainer: Adam Tait
---  About:      Telescope settings
---]]
+    Filename: telescope.lua
+    Config:   https://github.com/nvim-telescope/telescope.nvim#usage
+    Doc:      https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt
+]]
 
 
 local status_ok, telescope = pcall(require, 'telescope')
@@ -68,7 +67,6 @@ telescope.setup{
 -- Mappings {{{
 -- Default mappings: https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/mappings.lua
 local keymap = vim.keymap.set
-
 keymap('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>')
 keymap('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>')
 keymap('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>')

@@ -7,11 +7,10 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   bufferline.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Setup bufferline
---]]
+    Filename: bufferline.lua
+    Config:   https://github.com/akinsho/bufferline.nvim#configuration
+    Doc:      https://github.com/akinsho/bufferline.nvim/blob/main/doc/bufferline.txt
+]]
 
 
 local status_ok, buffer = pcall(require, 'bufferline')

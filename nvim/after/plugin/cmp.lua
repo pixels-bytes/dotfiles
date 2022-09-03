@@ -7,11 +7,11 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   completion.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Autocomplete settings
---]]
+    Filename: cmp.lua
+    Config:   https://github.com/hrsh7th/nvim-cmp#setup
+
+    FIX: Supertab in cmdline
+]]
 
 
 local has_words_before = function()

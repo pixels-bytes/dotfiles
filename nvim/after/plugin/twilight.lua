@@ -7,11 +7,9 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   twilight.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Twilight settings
---]]
+    Filename: twilight.lua
+    Config:   https://github.com/folke/twilight.nvim#%EF%B8%8F-configuration
+]]
 
 
 local status_ok, twilight = pcall(require, 'twilight')
@@ -19,6 +17,4 @@ if not status_ok then
   vim.notify('Trouble with twilight')
 end
 
-twilight.setup{
-  -- https://github.com/folke/twilight.nvim#%EF%B8%8F-configuration
-}
+twilight.setup{}

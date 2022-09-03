@@ -7,9 +7,9 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename: persistence.lua
- Config:   https://github.com/folke/persistence.nvim#%EF%B8%8F-configuration 
---]]
+    Filename: persistence.lua
+    Config:   https://github.com/folke/persistence.nvim#%EF%B8%8F-configuration 
+]]
 
 
 local status_ok, persistence = pcall(require, 'persistence')

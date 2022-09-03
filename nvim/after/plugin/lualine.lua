@@ -7,12 +7,10 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   lualine.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      The entry point
-
---]]
+    Filename: lualine.lua
+    Config:   https://github.com/nvim-lualine/lualine.nvim#usage-and-customization
+    Doc:      https://github.com/nvim-lualine/lualine.nvim/blob/master/doc/lualine.txt
+]]
 
 
 local function pnb()

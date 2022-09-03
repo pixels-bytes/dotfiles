@@ -7,16 +7,14 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   tabnine.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Tabnine settings
---]]
+    Filename: tabnine.lua
+    Config:   https://github.com/tzachar/cmp-tabnine#setup
+]]
 
 
 local status_ok, tabnine = pcall(require, 'cmp_tabnine.config')
 if not status_ok then
-  vim.notify('Problem with Tabnine')
+  vim.notify('Trouble with Tabnine')
   return
 end
 

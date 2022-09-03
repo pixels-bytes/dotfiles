@@ -7,11 +7,9 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   highlighting.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      LSP highlighting
---]]
+    Filename: highlighting.lua
+    Function: LSP highlighting
+]]
 
 
 local M = {}
@@ -30,4 +28,5 @@ M.setup = function (client)
     )
   end
 end
+
 return M

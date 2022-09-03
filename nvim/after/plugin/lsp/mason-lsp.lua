@@ -7,12 +7,10 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
-
- Filename:   lsp/mason-lsp.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- Function:   Entry point for lsp settings
---]]
+    Filename: lsp/mason-lsp.lua
+    Config:   https://github.com/williamboman/mason-lspconfig.nvim#configuration
+    Doc:      https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/mason-lspconfig.txt
+]]
 
 
 -- {{{ Pcalls

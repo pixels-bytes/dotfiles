@@ -7,15 +7,13 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   keymaps.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      A small set of mappings for vanilla vim
---]]
+    Filename: keymaps.lua
+]]
 
 
 local keymap = vim.keymap.set
 
+-- Disble arrow keys
 keymap('', '<Up>', '<Nop>')
 keymap('', '<Down>', '<Nop>')
 keymap('', '<Left>', '<Nop>')

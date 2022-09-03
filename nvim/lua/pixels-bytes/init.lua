@@ -7,12 +7,8 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
-
- Filename:   pixels-bytes/init.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- Function:   Initialise nvim 
---]]
+    Filename: pixels-bytes/init.lua
+]]
 
 
 require('pixels-bytes/vanilla')

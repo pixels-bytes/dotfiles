@@ -7,19 +7,15 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   terminal.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Settings for a persistant termainal
---]]
+    Filename: terminal.lua
+    Config:   https://github.com/numToStr/FTerm.nvim#%EF%B8%8F-setup-optional
+]]
 
 
 local status_ok, fterm = pcall(require, 'FTerm')
 if not status_ok then
   vim.notify('Problem with FTerm')
 end
-
-local keymap = vim.keymap.set
 
 -- Setup
 local dimensions = {
@@ -32,6 +28,8 @@ fterm.setup({
   dimensions = dimensions
 })
 
+-- Keymap
+local keymap = vim.keymap.set
 keymap('n', '<C-\\>', '<CMD>lua require("FTerm").toggle()<CR>')
 keymap('t', '<C-\\>', '<c-\\><c-n><CMD>lua require("FTerm").toggle()<CR>')
 

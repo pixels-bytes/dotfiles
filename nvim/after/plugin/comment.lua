@@ -7,10 +7,10 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename: comment.lua
- Config:   https://github.com/numToStr/Comment.nvim#configuration-optional
- Usage:    https://github.com/numToStr/Comment.nvim#-usage
---]]
+    Filename: comment.lua
+    Config:   https://github.com/numToStr/Comment.nvim#configuration-optional
+    Usage:    https://github.com/numToStr/Comment.nvim#-usage
+]]
 
 
 local status_ok, comment = pcall(require, "Comment")

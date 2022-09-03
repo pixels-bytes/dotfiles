@@ -7,11 +7,8 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   keymaps.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      LSP Keymappings
---]]
+    Filename: keymaps.lua
+]]
 
 
 local M = {}

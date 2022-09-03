@@ -7,9 +7,9 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename: alpha.lua
- Docs:     https://github.com/goolord/alpha-nvim/blob/main/doc/alpha.txt
---]]
+    Filename: alpha.lua
+    Doc:      https://github.com/goolord/alpha-nvim/blob/main/doc/alpha.txt
+]]
 
 
 local alpha = require('alpha')
@@ -80,7 +80,6 @@ dashboard.section.buttons.val = {
   dashboard.button('e', ' New file', ':ene <bar> startinsert <cr>'),
   dashboard.button('p', ' Projects', ':Telescope project<cr>'),
   dashboard.button('m', ' MRU', ':Telescope oldfiles<cr>'),
-  -- TODO: Install and configure ThePrimeagen/harpoon
   dashboard.button('b', ' Bookmarks', ':Telescope harpoon marks<cr>'),
   dashboard.button('w', ' Workspace', ':e ~/dev/workspace<cr>'),
   dashboard.button('a', ' Archive', ':e ~/dev/archive<cr>'),

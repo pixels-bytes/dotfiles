@@ -7,11 +7,10 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   autopairs.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Autopairs plugin config file
---]]
+    Filename: autopairs.lua
+    Config:   https://github.com/windwp/nvim-autopairs#default-values
+    Doc:      https://github.com/windwp/nvim-autopairs/blob/master/doc/nvim-autopairs.txt
+]]
 
 
 -- Pcalls {{{

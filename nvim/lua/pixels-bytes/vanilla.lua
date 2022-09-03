@@ -7,12 +7,8 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   pixels-bytes/vanilla.lua
- Github:     pixels and bytes
- Maintainer: Adam Tait
- About:      Settings for vanilla vim
-
---]]
+    Filename:   pixels-bytes/vanilla.lua
+]]
 
 
 local indent = 2

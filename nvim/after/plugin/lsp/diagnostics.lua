@@ -7,11 +7,9 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   diagnostics.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      LSP Diagnostics
---]]
+    Filename: diagnostics.lua
+    Function: LSP Diagnostics
+]]
 
 
 local M = {}

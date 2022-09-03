@@ -7,11 +7,9 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   capabilities.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      LSP Capabilities
---]]
+    Filename: capabilities.lua
+    Function: LSP Capabilities
+]]
 
 
 local status_ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")

@@ -7,22 +7,19 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   tree.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Setup nvim-tree
---]]
+    Filename: tree.lua
+    Setup:    https://github.com/kyazdani42/nvim-tree.lua#setup
+    Doc:      https://github.com/kyazdani42/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
 
+     TODO: Read through docs for config
+     FIX: Performance issue opening and closing nvim-tree
+]]
 
--- TODO: Read through docs for config
--- FIX: Performance issue opening and closing nvim-tree
 
 local status_ok, tree = pcall(require, 'nvim-tree')
 if not status_ok then
   vim.notify('Problem with nvim-tree')
 end
-
-local keymap = vim.keymap.set
 
 tree.setup({
   disable_netrw = true,
@@ -40,4 +37,6 @@ tree.setup({
   },
 })
 
+-- Keymaps
+local keymap = vim.keymap.set
 keymap('n', '<leader>e', ':NvimTreeToggle<cr>')

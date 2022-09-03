@@ -7,11 +7,10 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   gitsigns.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Setup those gitsigns
---]]
+    Filename: gitsigns.lua
+    Config:   https://github.com/lewis6991/gitsigns.nvim#usage
+    Doc:      https://github.com/lewis6991/gitsigns.nvim/blob/main/doc/gitsigns.txt
+]]
 
 
 local status_ok, gitsigns = pcall(require, "gitsigns")

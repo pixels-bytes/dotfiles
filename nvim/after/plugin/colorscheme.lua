@@ -7,11 +7,8 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   colorscheme.lua
- Github:     pixels and bytes here
- Maintainer: Adam Tait
- About:      Setup the colorscheme for nvim environment
---]]
+    Filename: colorscheme.lua
+]]
 
 
 vim.cmd 'colorscheme default'

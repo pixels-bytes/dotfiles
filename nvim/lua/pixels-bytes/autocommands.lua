@@ -7,9 +7,8 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename:   autocommands.lua
- About:      A small set of commands for vanilla nvim
---]]
+    Filename: autocommands.lua
+]]
 
 
 local cmd = vim.cmd

@@ -7,10 +7,10 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename: harpoon.lua
- Docs:     https://github.com/ThePrimeagen/harpoon#-harpooning
- Config:   https://github.com/ThePrimeagen/harpoon#-configuration
---]]
+    Filename: harpoon.lua
+    Config:   https://github.com/ThePrimeagen/harpoon#-configuration
+    Doc:      https://github.com/ThePrimeagen/harpoon#-harpooning
+]]
 
 
 local status_ok, harpoon = pcall(require, 'harpoon')

@@ -7,9 +7,9 @@
    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
   	\|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
 
- Filename: todos.lua
- Config:   https://github.com/folke/todo-comments.nvim#%EF%B8%8F-configuration
---]]
+    Filename: todos.lua
+    Config:   https://github.com/folke/todo-comments.nvim#%EF%B8%8F-configuration
+]]
 
 
 local status_ok, todos = pcall(require, 'todo-comments')
@@ -17,8 +17,8 @@ if not status_ok then
   vim.notify('Trouble with todo-comments')
 end
 
-local keymap = vim.keymap.set
-
 todos.setup{}
 
+-- Keymap
+local keymap = vim.keymap.set
 keymap('n', '<leader>xt', '<cmd>TodoTrouble<cr>')
