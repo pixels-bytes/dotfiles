@@ -2,6 +2,7 @@ starship init fish | source
 
 thefuck --alias | source
 set -g direnv_fish_mode disable_arrow
+set -gx EDITOR nvim
 direnv hook fish | source
 
 # set theme
