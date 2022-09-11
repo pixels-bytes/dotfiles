@@ -6,6 +6,7 @@ direnv hook fish | source
 
 # set theme
 # setscheme gruvbox.fish
+# setscheme catppuccin.fish
 fish_config theme choose nord
 
 set PATH $PATH /Users/abu/.local/bin
