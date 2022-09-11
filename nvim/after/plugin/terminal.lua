@@ -41,6 +41,14 @@ local lazygit = fterm:new({
 
 keymap('n', '<leader>g', function() lazygit:toggle() end)
 
+-- xplr
+local xplr = fterm:new({
+  cmd = 'xplr',
+  dimensions = dimensions,
+})
+
+keymap('n', '<leader>tx', function() xplr:toggle() end)
+
 -- Node
 local node = fterm:new({
   cmd = 'node',
