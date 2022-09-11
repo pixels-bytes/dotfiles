@@ -23,7 +23,8 @@ return require('packer').startup(function(use)
   -- System
   use 'airblade/vim-rooter'
   use 'lewis6991/impatient.nvim'
-  use {"folke/persistence.nvim",
+  use {
+    'folke/persistence.nvim',
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
     module = "persistence"
   }
