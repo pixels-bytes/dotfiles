@@ -79,4 +79,4 @@ local python = fterm:new({
   dimensions = dimensions,
 })
 
-keymap('n', '<leader>tp', function() node:toggle() end)
+keymap('n', '<leader>tp', function() python:toggle() end)
