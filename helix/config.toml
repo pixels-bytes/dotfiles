@@ -1,16 +1,27 @@
-theme = "dracula"
+#  ________  ________  ___  ___  ___       __   ________  ________  ___  ___
+# |\   __  \|\   __  \|\  \|\  \|\  \     |\  \|\   __  \|\   __  \|\  \|\  \
+# \ \  \|\  \ \  \|\ /\ \  \\\  \ \  \    \ \  \ \  \|\  \ \  \|\ /\ \  \\\  \
+#  \ \   __  \ \   __  \ \  \\\  \ \  \  __\ \  \ \   __  \ \   __  \ \  \\\  \
+#   \ \  \ \  \ \  \|\  \ \  \\\  \ \  \|\__\_\  \ \  \ \  \ \  \|\  \ \  \\\  \
+#    \ \__\ \__\ \_______\ \_______\ \____________\ \__\ \__\ \_______\ \_______\
+#     \|__|\|__|\|_______|\|_______|\|____________|\|__|\|__|\|_______|\|_______|
+
+#  Filename: config.toml
+
+
+theme = "tokyonight"
 
 [editor]
 true-color = true
 line-number = "relative"
 cursorline = true
 color-modes = true
-rulers = [80]
+rulers = [90]
 
 [editor.cursor-shape]
+select = "underline"
 insert = "bar"
 normal = "block"
-select = "underline"
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name"]
@@ -19,9 +30,3 @@ right = ["selections", "position", "file-encoding", "file-type"]
 
 [editor.lsp]
 display-messages = true
-
-[keys.normal]
-"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
-
-[keys.insert]
-j = { j = "normal_mode" }
