@@ -3,6 +3,7 @@
     "Lua.diagnostics.globals": [
         "xplr",
         "hs",
-        "hyper"
+        "hyper",
+        "version"
     ]
 }
