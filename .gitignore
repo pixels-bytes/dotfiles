@@ -1,5 +1,7 @@
 .DS_Store
 nvim/undodir/**
 nvim/.netrwhist
-
 nvim/sessions
+helix/runtime/**
+tmux/plugins/**
+hammerspoon/Spoons/**
