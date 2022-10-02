@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export API_KEY:pk_1b97913920f34604b0c2664a97d2e689
 SETUVAR TO_DIR:/Users/abu/\x2etofish
 SETUVAR XDG_CONFIG_HOME:/Users/abu/\x2econfig
 SETUVAR ZO_CMD:zo
