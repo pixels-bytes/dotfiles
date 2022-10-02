@@ -16,7 +16,7 @@ true-color = true
 line-number = "relative"
 cursorline = true
 color-modes = true
-rulers = [90]
+rulers = [80]
 
 [editor.cursor-shape]
 select = "underline"
@@ -30,3 +30,8 @@ right = ["selections", "position", "file-encoding", "file-type"]
 
 [editor.lsp]
 display-messages = true
+
+# Key Bindings
+[keys.normal]
+"ret" = ["open_below", "normal_mode"]
+"backspace" = { w = ":w" }
