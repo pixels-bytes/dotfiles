@@ -1,7 +1,0 @@
-[[language]]
-name = "css"
-language-server = { command = "css-languageserver", args = ["--stdio"], language-id="html"}
-
-[[language]]
-name = "html"
-language-server = { command = "html-languageserver", args = ["--stdio"], language-id="html"}
