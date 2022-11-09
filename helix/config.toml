@@ -17,6 +17,8 @@ line-number = "relative"
 cursorline = true
 color-modes = true
 rulers = [80]
+gutters = ["diagnostics", "line-numbers", "spacer"]
+bufferline = "always"
 
 [editor.cursor-shape]
 select = "underline"
@@ -24,14 +26,11 @@ insert = "bar"
 normal = "block"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name"]
-center = ["diagnostics"]
-right = ["selections", "position", "file-encoding", "file-type"]
+left = ["mode", "spinner", "diagnostics"]
+center = ["file-name", "file-type", "file-encoding"]
+right = ["selections", "position", "position-percentage"]
 
 [editor.lsp]
 display-messages = true
-
-# Key Bindings
-[keys.normal]
-"ret" = ["open_below", "normal_mode"]
-"backspace" = { w = ":w" }
+auto-signature-help = false
+display-signature-help-docs = false
