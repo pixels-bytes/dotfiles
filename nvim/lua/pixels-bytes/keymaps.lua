@@ -21,7 +21,7 @@ keymap('', '<Right>', '<Nop>')
 
 -- Map Leader, Local Leader, and Spacebar
 keymap('n', '<SPACE>', ':')
-vim.g.mapleader = ','
+vim.g.mapleader = '<space>'
 vim.g.maplocalleader = '\\'
 keymap('i', 'jj', '<esc>')
 
