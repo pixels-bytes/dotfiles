@@ -19,7 +19,7 @@ end
 
 require('lualine').setup({
   options = {
-    theme = 'nord'
+    theme = 'tokyonight'
   },
   sections = {
     lualine_c = { pnb, 'filename' }

@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'luisiacc/gruvbox-baby'
   use 'andersevenrud/nordic.nvim'
+  use 'folke/tokyonight.nvim'
 
   -- Interface
   use {

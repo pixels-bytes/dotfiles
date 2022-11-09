@@ -14,7 +14,7 @@
 vim.cmd 'colorscheme default'
 
 -- Protected call to stop crashing if colorscheme not available
-local colorscheme = 'nordic'
+local colorscheme = 'tokyonight-night'
 
 local status_ok, _ = pcall(vim.cmd, 'colorscheme ' .. colorscheme)
 
