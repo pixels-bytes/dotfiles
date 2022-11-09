@@ -23,7 +23,7 @@ local M = {}
 M.create_capabilities = function ()
   local capabilities = vim.lsp.protocol.make_client_capabilities()
   capabilities.textDocument.completion.completionItem.snippetSupport = true
-  capabilities = cmp_lsp.update_capabilities(capabilities)
+  capabilities = cmp_lsp.default_capabilities(capabilities)
 end
 
 return M
