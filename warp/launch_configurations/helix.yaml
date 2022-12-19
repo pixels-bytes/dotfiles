@@ -27,13 +27,13 @@ windows:
   - tabs:
       - title: hx
         layout:
-          cwd: /Users/abu/Desktop/1. Projects/dev/CS50x/finance
-        color: blue
-      - title: server
+          split_direction: horizontal
+          panes:
+            - cwd: /Users/abu/Desktop/1. Projects/dev/CS50x/bmi
+            - cwd: /Users/abu/Desktop/1. Projects/dev/CS50x/bmi
+      - title: term
         layout:
-          cwd: /Users/abu/Desktop/1. Projects/dev/CS50x/finance
-        color: red
+          cwd: /Users/abu/Desktop/1. Projects/dev/CS50x/bmi
       - title: lg
         layout:
-          cwd: /Users/abu/Desktop/1. Projects/dev/CS50x/finance
-        color: green
+          cwd: /Users/abu/Desktop/1. Projects/dev/CS50x/bmi
