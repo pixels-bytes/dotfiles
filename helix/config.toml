@@ -17,8 +17,7 @@ line-number = "relative"
 cursorline = true
 color-modes = true
 rulers = [80]
-gutters = ["diagnostics", "line-numbers", "spacer"]
-bufferline = "always"
+gutters = ["diagnostics", "spacer", "diff", "line-numbers", "spacer"]
 
 [editor.cursor-shape]
 select = "underline"
@@ -34,3 +33,13 @@ right = ["selections", "position", "position-percentage"]
 display-messages = true
 auto-signature-help = false
 display-signature-help-docs = false
+
+[keys.insert]
+C-p = "signature_help"
+
+[keys.normal]
+C-d = ["half_page_down", "align_view_center"]
+C-u = ["half_page_up", "align_view_center"]
+C-b = ["page_up", "align_view_center"]
+C-f = ["page_down", "align_view_center"]
+
