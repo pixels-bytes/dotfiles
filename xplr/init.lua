@@ -1,4 +1,4 @@
-version = "0.19.3"
+version = "0.20.1"
 
 xplr.config.modes.builtin.action.key_bindings.on_key["!"].messages = {
   { Call = { command = "fish", args = { "-i" } } },
