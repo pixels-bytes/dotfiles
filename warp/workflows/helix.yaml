@@ -1,0 +1,11 @@
+---
+name: Update helix
+command: |-
+    cd ~/src/helix
+    git pull origin master
+    cargo install --path helix-term/
+tags:
+  - helix
+  - dev
+description: Pull from source and rebuild
+author: Pixels & Bytes
