@@ -20,10 +20,8 @@ keymap('', '<Left>', '<Nop>')
 keymap('', '<Right>', '<Nop>')
 
 -- Map Leader, Local Leader, and Spacebar
-keymap('n', '<SPACE>', ':')
-vim.g.mapleader = '<space>'
+vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
-keymap('i', 'jj', '<esc>')
 
 -- Some simple handy pairings
 -- https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt
