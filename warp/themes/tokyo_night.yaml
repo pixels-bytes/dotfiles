@@ -1,8 +1,8 @@
 accent: '#7aa2f7'
 background: '#1a1b26'
 background_image:
-  path: images/bounty-hunters.jpg
-  opacity: 5
+  path: images/death-star.jpg
+  opacity: 15
 details: darker
 foreground: '#a9b1d6'
 terminal_colors:
