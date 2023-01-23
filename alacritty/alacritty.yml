@@ -23,13 +23,13 @@ font:
   # UI for powerline & tmux bottom bar.
   normal:
     # Font name
-    family: Fira Code
+    family: JetBrains Mono
     antialias: true
   bold:
-    family: Fira Code
+    family: JetBrains Mono
     style: bold
   italic:
-    family: Fira Code
+    family: JetBrains Mono
     style: italic
   
   # Font size
@@ -41,7 +41,7 @@ font:
   # to your convenience but make sure to adjust 'glyph_offset' appropriately post that
   offset:
     x: 0
-    y: 4
+    y: 0
 
   # Note: This requires RESTART
   # By default when you change the offset above you'll see an issue, where the texts are bottom
@@ -50,10 +50,10 @@ font:
   glyph_offset:
     x: 0
     # Keeping this as half of offset to vertically align the text in cursor
-    y: 2
+    y: 0
 
   # Better font rendering for mac
-  use_thin_strokes: true
+  AppleFontSmoothing: true
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
@@ -79,9 +79,4 @@ key_bindings:
 
 # Colors
 import:
-  # /Users/abu/.config/alacritty/dracula.yml
-  # /Users/abu/.config/alacritty/catppuccin.yml
   - /Users/abu/.config/alacritty/tokyonight.yml
-  # /Users/abu/.config/alacritty/nord.yml
-  # /Users/abu/.config/alacritty/embark.yml
-  # /Users/abu/.config/alacritty/gruvbox-yml
