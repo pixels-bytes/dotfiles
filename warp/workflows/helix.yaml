@@ -3,7 +3,7 @@ name: Update helix
 command: |-
     cd ~/src/helix
     git pull origin master
-    cargo install --path helix-term/
+    cargo install --path helix-term/ --locked
 tags:
   - helix
   - dev
