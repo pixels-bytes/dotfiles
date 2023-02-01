@@ -35,11 +35,12 @@ auto-signature-help = false
 display-signature-help-docs = false
 
 [keys.insert]
+j = { j = "normal_mode" }
 C-p = "signature_help"
 
 [keys.normal]
+c = ["trim_selections", "change_selection"]
 C-d = ["half_page_down", "align_view_center"]
 C-u = ["half_page_up", "align_view_center"]
 C-b = ["page_up", "align_view_center"]
 C-f = ["page_down", "align_view_center"]
-
