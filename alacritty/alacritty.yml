@@ -13,6 +13,7 @@ window:
   startup_mode: Fullscreen
   
   decorations: none
+  opacity: 0.6
 
 # Sample Font configuration for font: Monoid.
 # Feel free to use different font configuration family & face for each sections
@@ -79,4 +80,4 @@ key_bindings:
 
 # Colors
 import:
-  - /Users/abu/.config/alacritty/tokyonight.yml
+  - /Users/abu/.config/alacritty/themes/tokyo-night.yml
