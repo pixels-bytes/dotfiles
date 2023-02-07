@@ -35,7 +35,6 @@ auto-signature-help = false
 display-signature-help-docs = false
 
 [keys.insert]
-j = { j = "normal_mode" }
 C-p = "signature_help"
 
 [keys.normal]
