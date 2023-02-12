@@ -9,7 +9,7 @@
 #  Filename: config.toml
 
 
-theme = "tokyonight"
+theme = "rose_pine"
 
 [editor]
 true-color = true

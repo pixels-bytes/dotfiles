@@ -5,9 +5,7 @@ set -gx EDITOR hx
 direnv hook fish | source
 
 # set theme
-setscheme tokyonight.fish
-# setscheme gruvbox.fish
-# setscheme catppuccin.fish
+setscheme rose-pine.fish
 # fish_config theme choose nord
 # fish_config theme choose Dracula
 
